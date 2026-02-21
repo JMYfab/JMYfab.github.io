@@ -37,7 +37,6 @@ body {
     max-width: 900px;
     margin: 80px auto;
     padding: 0 20px;
-    position: relative;
 }
 
 h2 { 
@@ -45,38 +44,25 @@ h2 {
     font-size: 24px; 
 }
 
-/* REWARDS BURST */
-.rewards-section {
-    position: relative;
-    margin: 120px 0;
-    height: 300px;
-}
-
-.rewards-circle {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 280px;
-    height: 280px;
-    background: #4F6F81;
+/* REWARDS BLOCK */
+.rewards-highlight {
+    margin: 100px 0;
+    padding: 60px 30px;
+    background-color: #4F6F81;
     color: #fff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: center;
-    padding: 30px;
     font-weight: 800;
-    font-size: 22px;
-    line-height: 1.3;
-    box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+    font-size: 26px;
+    border-radius: 8px;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.25);
 }
 
-.rewards-text {
-    text-align: center;
-    max-width: 650px;
-    margin: 200px auto 0 auto;
+.rewards-subtext {
+    max-width: 700px;
+    margin: 30px auto 0 auto;
     font-weight: 600;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
 /* CTA */
@@ -154,12 +140,9 @@ h2 {
         your business or organization — we handle the apparel and merchandise.
     </p>
 
-    <!-- REWARDS SECTION -->
-    <div class="rewards-section">
-        <div class="rewards-circle">
-            ASK US<br>ABOUT OUR<br>REWARDS<br>PROGRAM
-        </div>
-        <div class="rewards-text">
+    <div class="rewards-highlight">
+        ASK US ABOUT OUR REWARDS PROGRAM
+        <div class="rewards-subtext">
             Earn back value through your online store with our exclusive rewards structure
             designed to support businesses and organizations long-term.
         </div>
