@@ -28,69 +28,138 @@
 }
 </script>
 
-<!-- FAQ SCHEMA -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What products can be included in our store?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Your store can include custom printed and embroidered apparel, hats, hoodies, polos and promotional merchandise including water bottles, key chains and other engraved items."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can our store stay open year-round?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. We offer both limited-time store windows and year-round storefront options."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Who handles production and fulfillment?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "JMY Fabrication manages production, quality control and fulfillment so your organization does not need to manage inventory or logistics."
-      }
-    }
-  ]
-}
-</script>
-
 <style>
 body { margin:0; font-family:'Montserrat', sans-serif; background:#D6C5AA; color:#222; line-height:1.6; }
+
+/* NAVBAR */
+.navbar {
+    background:#000;
+    padding:16px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.nav-logo img {
+    height:50px;
+}
+
+.menu { position:relative; }
+
+.menu-button {
+    color:#fff;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.dropdown {
+    position:absolute;
+    right:0;
+    top:40px;
+    background:#fff;
+    min-width:260px;
+    display:none;
+    flex-direction:column;
+    border-radius:6px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.2);
+}
+
+.dropdown a {
+    padding:14px 18px;
+    color:#4F6F81;
+    text-decoration:none;
+    font-weight:600;
+    border-bottom:1px solid #eee;
+}
+
+.dropdown a:hover { background:#f5f5f5; }
+.menu.active .dropdown { display:flex; }
+
+/* HEADER */
 .header { background:#4F6F81; color:#fff; text-align:center; padding:70px 20px 90px; }
 .logo { max-width:180px; margin-bottom:25px; }
+
 .hero-image { max-width:1100px; margin:-60px auto 40px; padding:0 20px; }
 .hero-image img { width:100%; border-radius:10px; box-shadow:0 25px 50px rgba(0,0,0,.25); }
+
 .container { max-width:900px; margin:0 auto; padding:0 20px; }
 h2 { margin-top:60px; color:#4F6F81; }
+
 .cta-store { text-align:center; margin:40px 0; }
-.cta-store a { background:#4F6F81; color:#fff; padding:18px 40px; text-decoration:none; font-weight:800; border-radius:4px; font-size:18px; transition:.3s; display:inline-block; }
+.cta-store a {
+    background:#4F6F81;
+    color:#fff;
+    padding:18px 40px;
+    text-decoration:none;
+    font-weight:800;
+    border-radius:4px;
+    font-size:18px;
+    transition:.3s;
+    display:inline-block;
+}
 .cta-store a:hover { transform:translateY(-4px); box-shadow:0 12px 25px rgba(0,0,0,.25); }
 
+/* FAQ */
 .faq-wrapper { background:#4F6F81; color:#fff; padding:80px 20px; margin-top:80px; }
 .faq-inner { max-width:900px; margin:0 auto; }
 .faq-title { text-align:center; font-size:30px; font-weight:800; margin-bottom:50px; }
 
-.rewards-highlight { margin:100px auto; padding:60px 30px; background:#4F6F81; color:#fff; text-align:center; font-weight:800; font-size:26px; border-radius:8px; max-width:900px; box-shadow:0 20px 45px rgba(0,0,0,.25); }
-.rewards-subtext { max-width:700px; margin:25px auto 0; font-weight:600; font-size:16px; }
+/* REWARDS */
+.rewards-highlight {
+    margin:100px auto;
+    padding:60px 30px;
+    background:#4F6F81;
+    color:#fff;
+    text-align:center;
+    font-weight:800;
+    font-size:26px;
+    border-radius:8px;
+    max-width:900px;
+}
 
-.footer { background:#1a1a1a; color:#fff; text-align:center; padding:40px 20px; margin-top:100px; }
+/* FOOTER (MATCH HOMEPAGE FORMAT) */
+.footer {
+    background:#111;
+    color:#fff;
+    text-align:center;
+    padding:60px 20px;
+    margin-top:100px;
+    font-size:16px;
+    line-height:1.8;
+}
+.footer a { color:#fff; text-decoration:none; }
+
 </style>
 </head>
 
 <body>
 
+<!-- NAVIGATION -->
+<div class="navbar">
+    <div class="nav-logo">
+        <a href="index.html">
+            <img src="final logo white.svg" alt="JMY Fabrication Logo">
+        </a>
+    </div>
+
+    <div class="menu" id="menu">
+        <div class="menu-button" onclick="toggleMenu()">Menu ▾</div>
+        <div class="dropdown">
+            <a href="index.html">Home</a>
+            <a href="index.html#services">What We Offer</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+            <a href="online-stores.html">Need a Store?</a>
+            <a href="#">Request a Quote</a>
+            <a href="#">Schedule an Appointment</a>
+            <a href="#">Browse Promotional Products</a>
+            <a href="#">Browse Our Catalog</a>
+            <a href="#">Browse Apparel</a>
+        </div>
+    </div>
+</div>
+
 <div class="header">
-<a href="index.html">
-<img src="final logo white.svg" alt="JMY Fabrication Logo" class="logo">
-</a>
 <h1>Custom Online Stores for Businesses, Organizations & Teams</h1>
 <p>Professional branded apparel programs with managed production and fulfillment.</p>
 </div>
@@ -109,32 +178,22 @@ REQUEST A STORE
 <div class="container">
 
 <p>
-JMY Fabrication builds fully customized online stores for businesses, organizations and teams across the United States. Based in New York and serving clients nationwide, we create streamlined storefront programs that eliminate the complexity of ordering branded apparel and promotional merchandise. Our online store solutions are designed for scalability, consistency and long-term brand growth.
+JMY Fabrication builds fully customized online stores for businesses, organizations and teams across the United States. Based in New York and serving clients nationwide, we create streamlined storefront programs that eliminate the complexity of ordering branded apparel and promotional merchandise.
 </p>
 
 <h2>Corporate & Business Apparel Programs</h2>
 <p>
-Companies rely on our online storefront programs to centralize employee apparel ordering, maintain brand standards and simplify internal processes. Whether you operate a construction company, corporate office, manufacturing facility or multi-location organization, a branded online store provides consistent access to approved uniforms, polos, outerwear and promotional items. This eliminates repeated ordering cycles and ensures that your team always represents your brand professionally.
+Companies rely on our online storefront programs to centralize employee apparel ordering, maintain brand standards and simplify internal processes.
 </p>
 
 <h2>Team & Organization Stores</h2>
 <p>
-Sports teams, schools, associations and community groups benefit from professionally managed spirit wear and merchandise programs. We design storefronts that showcase high-quality embroidered and printed apparel, along with promotional merchandise supporters actually want to wear and use. Parents, members and fans can order easily without your organization handling inventory or payments.
+We design storefronts that showcase embroidered and printed apparel along with promotional merchandise supporters actually want.
 </p>
 
 <h2>Year-Round Store Options</h2>
 <p>
-Unlike limited pop-up campaigns, we offer year-round storefront options. This allows employees or members to order apparel whenever needed. Year-round programs reduce administrative workload, increase brand consistency and improve overall program sustainability.
-</p>
-
-<h2>Production, Printing & Fulfillment</h2>
-<p>
-We manage every aspect of production — from screen printing and embroidery to engraving and promotional product customization. Your store can include hats, hoodies, polos, performance wear, water bottles, key chains and other engraved items. Orders are processed efficiently with professional quality control standards.
-</p>
-
-<h2>Designed for Long-Term Brand Growth</h2>
-<p>
-An online apparel store is more than a sales tool — it becomes a structured brand program. Centralized ordering, approved product catalogs and professional fulfillment ensure consistency while saving time. Our system is designed to support both corporate programs and organization-based initiatives.
+We offer both limited-time store windows and year-round storefront programs.
 </p>
 
 </div>
@@ -161,9 +220,6 @@ JMY Fabrication manages production, quality control and fulfillment so your orga
 
 <div class="rewards-highlight">
 ASK US ABOUT OUR REWARDS PROGRAM
-<div class="rewards-subtext">
-Earn long-term value through our exclusive rewards program designed to support businesses and organizations.
-</div>
 </div>
 
 <div class="cta-store">
@@ -172,10 +228,19 @@ REQUEST A STORE
 </a>
 </div>
 
+<!-- FOOTER MATCHING FRONT PAGE -->
 <div class="footer">
-JMY Fabrication • Serving Clients Nationwide<br><br>
-WeGrowYou@jmyfabrication.com • 315-767-9062
+JMY Fabrication • Based in New York • Serving Clients Nationwide<br>
+Email: WeGrowYou@jmyfabrication.com<br>
+Phone: 315-767-9062<br><br>
+© 2026 JMY Fabrication
 </div>
+
+<script>
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
