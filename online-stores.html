@@ -24,7 +24,7 @@
     "addressRegion": "NY",
     "addressCountry": "US"
   },
-  "areaServed": "US"
+  "areaServed": "United States"
 }
 </script>
 
@@ -39,7 +39,7 @@
       "name": "What products can be included in our store?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Your store can include custom printed and embroidered apparel, hats, hoodies, polos and promotional merchandise including water bottles, key chains and other engraved items."
+        "text": "Your store can include custom printed and embroidered apparel, hats, hoodies, polos and promotional merchandise including water bottles, key chains and engraved items."
       }
     },
     {
@@ -47,7 +47,7 @@
       "name": "Can our store stay open year-round?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. We offer both limited-time store windows and year-round storefront options."
+        "text": "Yes. We offer both limited-time store windows and year-round storefront options depending on your needs."
       }
     },
     {
@@ -71,7 +71,6 @@ body { margin:0; font-family:'Montserrat', sans-serif; background:#D6C5AA; color
     padding:14px 30px;
     display:flex;
     justify-content:flex-end;
-    position:relative;
 }
 .menu { position:relative; }
 .menu-button { color:#fff; font-weight:600; cursor:pointer; }
@@ -85,6 +84,7 @@ body { margin:0; font-family:'Montserrat', sans-serif; background:#D6C5AA; color
     flex-direction:column;
     border-radius:6px;
     box-shadow:0 15px 35px rgba(0,0,0,.2);
+    z-index:999;
 }
 .dropdown a {
     padding:14px 18px;
@@ -106,10 +106,11 @@ body { margin:0; font-family:'Montserrat', sans-serif; background:#D6C5AA; color
 
 /* CONTENT */
 .container { max-width:900px; margin:0 auto; padding:0 20px; }
-h2 { margin-top:60px; color:#4F6F81; }
+h2 { margin-top:60px; color:#4F6F81; font-weight:800; }
+h3 { margin-top:30px; color:#4F6F81; }
 
 /* CTA BUTTON */
-.cta-store { text-align:center; margin:40px 0; }
+.cta-store { text-align:center; margin:50px 0; }
 .cta-store a {
     background:#4F6F81;
     color:#fff;
@@ -121,10 +122,21 @@ h2 { margin-top:60px; color:#4F6F81; }
     transition:.3s;
     display:inline-block;
 }
-.cta-store a:hover { transform:translateY(-4px); box-shadow:0 12px 25px rgba(0,0,0,.25); }
+.cta-store a:hover { 
+    transform:translateY(-4px); 
+    box-shadow:0 12px 25px rgba(0,0,0,.25); 
+}
 
-/* FAQ SECTION */
-.faq-wrapper { background:#4F6F81; color:#fff; padding:80px 20px; margin-top:80px; }
+/* HOW IT WORKS */
+.process-section {
+    margin-top:70px;
+}
+.process-step {
+    margin-bottom:35px;
+}
+
+/* FAQ */
+.faq-wrapper { background:#4F6F81; color:#fff; padding:80px 20px; margin-top:100px; }
 .faq-inner { max-width:900px; margin:0 auto; }
 .faq-title { text-align:center; font-size:30px; font-weight:800; margin-bottom:50px; }
 
@@ -178,7 +190,7 @@ h2 { margin-top:60px; color:#4F6F81; }
 <!-- HEADER -->
 <div class="header">
 <a href="index.html">
-<img src="final logo white.svg" alt="JMY Fabrication Logo" class="logo">
+<img src="final logo white.svg" alt="JMY Fabrication embroidered logo in white" class="logo">
 </a>
 <h1>Custom Online Stores for Businesses, Organizations & Teams</h1>
 <p>Professional branded apparel programs with managed production and fulfillment.</p>
@@ -187,7 +199,7 @@ h2 { margin-top:60px; color:#4F6F81; }
 <!-- IMAGE -->
 <div class="hero-image">
 <img src="0f23dcd5-d071-46e4-b901-9ab7d77c8dc1.png"
-alt="Professional business team wearing custom embroidered JMY Fabrication branded apparel">
+alt="Professional team wearing custom embroidered business apparel created by JMY Fabrication">
 </div>
 
 <div class="cta-store">
@@ -196,16 +208,16 @@ REQUEST A STORE
 </a>
 </div>
 
-<!-- SEO CONTENT -->
+<!-- MAIN CONTENT -->
 <div class="container">
 
 <p>
-JMY Fabrication builds fully customized online stores for businesses, organizations and teams across the United States. Based in New York and serving clients nationwide, we create streamlined storefront programs that eliminate the complexity of ordering branded apparel and promotional merchandise while maintaining high production standards.
+JMY Fabrication builds fully customized online stores for businesses, organizations and teams across the United States. We create streamlined storefront programs that eliminate the complexity of ordering branded apparel and promotional merchandise while maintaining high production standards.
 </p>
 
 <h2>Corporate & Business Apparel Programs</h2>
 <p>
-Our online storefront programs allow businesses to centralize employee apparel ordering, maintain brand consistency and simplify internal processes. Companies across multiple industries use our system to manage uniforms, branded polos, outerwear and promotional merchandise without the burden of handling inventory.
+Our online storefront programs allow businesses to centralize employee apparel ordering, maintain brand consistency and simplify internal processes. Companies use our system to manage uniforms, branded polos, outerwear and promotional merchandise without the burden of handling inventory.
 </p>
 
 <h2>Team & Organization Stores</h2>
@@ -213,14 +225,39 @@ Our online storefront programs allow businesses to centralize employee apparel o
 Sports teams, schools and community organizations benefit from professionally managed spirit wear and merchandise programs. We design clean, easy-to-use storefronts that showcase high-quality embroidered and printed apparel along with promotional merchandise supporters actually want to wear.
 </p>
 
-<h2>Year-Round Store Options</h2>
+<h2>Year-Round or Limited Store Windows</h2>
 <p>
-We offer both limited-time store windows and year-round storefront programs. Year-round options provide convenience, improve brand consistency and reduce administrative workload.
+Choose between limited-time ordering windows or year-round storefront access. Year-round options improve convenience, strengthen brand consistency and reduce administrative workload.
 </p>
+
+<h2>How It Works</h2>
+<div class="process-section">
+
+<div class="process-step">
+<h3>1. Store Setup</h3>
+<p>We design and build your custom storefront with approved apparel, branding and pricing.</p>
+</div>
+
+<div class="process-step">
+<h3>2. Orders Collected</h3>
+<p>Your team or organization orders directly through the online store — no spreadsheets or manual tracking.</p>
+</div>
+
+<div class="process-step">
+<h3>3. Production</h3>
+<p>We handle printing, embroidery, engraving and quality control in-house.</p>
+</div>
+
+<div class="process-step">
+<h3>4. Fulfillment</h3>
+<p>Orders are distributed based on your program structure — bulk delivery or individual shipment.</p>
+</div>
+
+</div>
 
 <h2>Production & Fulfillment</h2>
 <p>
-We manage production, printing, embroidery, engraving and order fulfillment. Stores can include hats, hoodies, polos, water bottles, key chains and other engraved items — all produced with professional quality control standards.
+We manage production, printing, embroidery, engraving and order fulfillment. Stores can include hats, hoodies, polos, water bottles, key chains and engraved merchandise — all produced with professional quality control standards.
 </p>
 
 </div>
@@ -231,7 +268,7 @@ We manage production, printing, embroidery, engraving and order fulfillment. Sto
 <div class="faq-title">Frequently Asked Questions</div>
 
 <p><strong>What products can be included in our store?</strong><br>
-Your store can include custom printed and embroidered apparel, hats, hoodies, polos and promotional merchandise including water bottles, key chains and other engraved items.
+Your store can include custom printed and embroidered apparel, hats, hoodies, polos and promotional merchandise including water bottles, key chains and engraved items.
 </p>
 
 <p><strong>Can our store stay open year-round?</strong><br>
@@ -239,7 +276,7 @@ Yes. We offer both limited-time store windows and year-round storefront options.
 </p>
 
 <p><strong>Who handles production and fulfillment?</strong><br>
-JMY Fabrication manages production, quality control and fulfillment so your organization does not need to manage inventory.
+JMY Fabrication manages production, quality control and fulfillment so your organization does not need to manage inventory or logistics.
 </p>
 
 </div>
