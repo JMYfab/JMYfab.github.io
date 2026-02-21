@@ -10,6 +10,40 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 
+<!-- FAQ SCHEMA FOR SEO BOOST -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What products can be included in our store?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your store can include custom printed and embroidered apparel, hats, hoodies, polos and promotional merchandise including water bottles, key chains and other engraved items."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can our store stay open year-round?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We offer both limited-time store windows and year-round storefront options."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who handles production and fulfillment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "JMY Fabrication manages production, quality control and fulfillment so your organization does not have to manage inventory."
+      }
+    }
+  ]
+}
+</script>
+
 <style>
 * { box-sizing: border-box; }
 
@@ -77,7 +111,6 @@ body {
 .logo {
     max-width: 180px;
     margin-bottom: 25px;
-    cursor: pointer;
 }
 
 .header h1 {
@@ -134,7 +167,7 @@ h2 {
     color: #4F6F81;
 }
 
-/* FAQ SECTION BLUE */
+/* FAQ BLUE SECTION */
 .faq-wrapper {
     background-color: #4F6F81;
     color: #fff;
@@ -158,12 +191,11 @@ h2 {
 
 .faq-item h3 {
     margin-bottom: 10px;
-    font-weight: 700;
 }
 
-/* REWARDS */
+/* REWARDS SECTION */
 .rewards-highlight {
-    margin: 100px 0 40px 0;
+    margin: 100px auto;
     padding: 60px 30px;
     background-color: #4F6F81;
     color: #fff;
@@ -171,12 +203,13 @@ h2 {
     font-weight: 800;
     font-size: 26px;
     border-radius: 8px;
+    max-width: 900px;
     box-shadow: 0 20px 45px rgba(0,0,0,0.25);
 }
 
 .rewards-subtext {
     max-width: 700px;
-    margin: 30px auto 0 auto;
+    margin: 25px auto 0 auto;
     font-weight: 600;
     font-size: 16px;
 }
@@ -199,9 +232,6 @@ h2 {
         <div class="menu-button" onclick="toggleMenu()">Menu ▾</div>
         <div class="dropdown">
             <a href="index.html">Home</a>
-            <a href="#">About Us</a>
-            <a href="#">Contact Us</a>
-            <a href="index.html#services">What We Offer</a>
             <a href="online-stores.html">Need a Store?</a>
         </div>
     </div>
@@ -236,8 +266,8 @@ h2 {
 
     <h2>Professional Company Apparel Stores</h2>
     <p>
-        Give employees access to a branded storefront featuring approved apparel,
-        uniforms and promotional items.
+        Provide employees with a branded storefront featuring approved apparel,
+        uniforms and promotional merchandise.
     </p>
 
     <h2>Team & Organization Stores</h2>
@@ -259,7 +289,7 @@ h2 {
 
 </div>
 
-<!-- BLUE FAQ SECTION -->
+<!-- FAQ BLUE SECTION -->
 <div class="faq-wrapper">
     <div class="faq-inner">
         <h2>Frequently Asked Questions</h2>
@@ -284,9 +314,18 @@ h2 {
             <h3>Who handles production and fulfillment?</h3>
             <p>
                 JMY Fabrication manages production, quality control and fulfillment
-                so your organization doesn’t have to manage inventory.
+                so your organization does not have to manage inventory.
             </p>
         </div>
+    </div>
+</div>
+
+<!-- RESTORED REWARDS -->
+<div class="rewards-highlight">
+    ASK US ABOUT OUR REWARDS PROGRAM
+    <div class="rewards-subtext">
+        Earn value back through your online store with our exclusive rewards program
+        designed to support businesses and organizations long-term.
     </div>
 </div>
 
