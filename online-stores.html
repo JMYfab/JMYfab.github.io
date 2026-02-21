@@ -19,37 +19,70 @@ body {
     line-height: 1.6;
 }
 
+/* HEADER */
 .header {
     background-color: #4F6F81;
     color: #fff;
     text-align: center;
-    padding: 80px 20px;
+    padding: 90px 20px;
 }
 
+.header h1 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+/* CONTENT */
 .container {
     max-width: 900px;
-    margin: 60px auto;
+    margin: 80px auto;
     padding: 0 20px;
+    position: relative;
 }
 
-h1 { font-size: 32px; }
-h2 { margin-top: 50px; font-size: 24px; }
+h2 { 
+    margin-top: 60px; 
+    font-size: 24px; 
+}
 
-.rewards-highlight {
-    margin: 80px 0;
-    padding: 50px 30px;
-    background-color: #4F6F81;
+/* REWARDS BURST */
+.rewards-section {
+    position: relative;
+    margin: 120px 0;
+    height: 300px;
+}
+
+.rewards-circle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 280px;
+    height: 280px;
+    background: #4F6F81;
     color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    padding: 30px;
     font-weight: 800;
-    font-size: 24px;
-    border-radius: 8px;
-    box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+    font-size: 22px;
+    line-height: 1.3;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.3);
 }
 
+.rewards-text {
+    text-align: center;
+    max-width: 650px;
+    margin: 200px auto 0 auto;
+    font-weight: 600;
+}
+
+/* CTA */
 .cta {
     text-align: center;
-    margin: 60px 0;
+    margin: 80px 0;
 }
 
 .cta a {
@@ -59,14 +92,21 @@ h2 { margin-top: 50px; font-size: 24px; }
     text-decoration: none;
     font-weight: 700;
     border-radius: 4px;
+    transition: all 0.3s ease;
 }
 
+.cta a:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* FOOTER */
 .footer {
     background-color: #1a1a1a;
     color: white;
     text-align: center;
     padding: 40px 20px;
-    margin-top: 80px;
+    margin-top: 100px;
 }
 </style>
 </head>
@@ -82,30 +122,29 @@ h2 { margin-top: 50px; font-size: 24px; }
 
     <p>
         JMY Fabrication designs and manages custom online stores that allow businesses,
-        organizations and teams to sell branded apparel and merchandise without the
+        organizations and teams to offer branded apparel and merchandise without the
         burden of handling inventory, collecting payments or managing fulfillment.
     </p>
 
     <h2>Professional Company Apparel Stores</h2>
     <p>
         Provide employees with a branded storefront where they can order approved
-        company apparel and promotional gear on demand. Perfect for corporate uniforms,
-        onboarding kits, trade show apparel and ongoing branded merchandise programs.
+        company apparel and promotional gear on demand. Ideal for corporate uniforms,
+        onboarding kits, trade show apparel and ongoing merchandise programs.
     </p>
 
     <h2>Team & Organization Stores</h2>
     <p>
         Launch a fully customized online store for sports teams, schools,
-        community organizations and business groups. Sell spirit wear, event apparel
+        community organizations and business groups. Offer spirit wear, event apparel
         and branded merchandise with simplified ordering and professional fulfillment.
     </p>
 
     <h2>Year-Round Store Options</h2>
     <p>
         Unlike limited-time pop-up stores, we offer the ability to keep your
-        online store open year-round. This allows employees, members or team
-        supporters to order whenever they need — without waiting for another
-        ordering window.
+        online store open year-round. Employees, members or supporters can order
+        whenever they need — without waiting for another ordering window.
     </p>
 
     <h2>How It Works</h2>
@@ -115,11 +154,15 @@ h2 { margin-top: 50px; font-size: 24px; }
         your business or organization — we handle the apparel and merchandise.
     </p>
 
-    <div class="rewards-highlight">
-        ASK US ABOUT OUR REWARDS PROGRAM
-        <br><br>
-        Earn back value through your online store with our exclusive rewards structure
-        designed to support businesses and organizations long-term.
+    <!-- REWARDS SECTION -->
+    <div class="rewards-section">
+        <div class="rewards-circle">
+            ASK US<br>ABOUT OUR<br>REWARDS<br>PROGRAM
+        </div>
+        <div class="rewards-text">
+            Earn back value through your online store with our exclusive rewards structure
+            designed to support businesses and organizations long-term.
+        </div>
     </div>
 
     <div class="cta">
