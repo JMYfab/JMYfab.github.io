@@ -17,13 +17,13 @@ body {
     color: #222;
 }
 
-/* NAVIGATION */
+/* NAV */
 .navbar {
     background-color: #4F6F81;
     padding: 15px 30px;
     display: flex;
     justify-content: flex-end;
-    gap: 25px;
+    gap: 30px;
 }
 
 .navbar a {
@@ -31,10 +31,6 @@ body {
     text-decoration: none;
     font-weight: 600;
     font-size: 14px;
-}
-
-.navbar a:hover {
-    text-decoration: underline;
 }
 
 /* TEXTURE */
@@ -49,109 +45,107 @@ body {
 /* HERO */
 .hero {
     text-align: center;
-    padding: 110px 20px;
+    padding: 120px 20px 180px 20px;
     color: #D6C5AA;
     position: relative;
 }
 
 .logo {
     max-width: 240px;
-    margin-bottom: 45px;
+    margin-bottom: 40px;
 }
 
 .hero h1 {
-    font-size: 34px;
-    font-weight: 700;
-    margin-bottom: 18px;
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
 .hero p {
     max-width: 700px;
-    margin: 0 auto 35px auto;
-    font-size: 16px;
+    margin: auto;
     line-height: 1.6;
 }
 
-/* REWARDS BADGE */
-.rewards-badge {
+/* SERVICES SECTION — layered look */
+.services-section {
+    background-color: #CBB894;
+    padding: 120px 20px 140px 20px;
+    position: relative;
+    text-align: center;
+}
+
+.services-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.service-card {
+    background: #D6C5AA;
+    padding: 40px 30px;
+    border-left: 6px solid #4F6F81;
+    text-align: left;
+}
+
+.service-card h3 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.service-card p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* REWARDS BURST */
+.rewards-burst {
     position: absolute;
-    top: 30px;
-    left: 30px;
-    background-color: #D6C5AA;
-    color: #4F6F81;
-    padding: 14px 18px;
-    font-size: 13px;
-    font-weight: 700;
+    bottom: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 240px;
+    height: 240px;
+    background: #4F6F81;
+    color: #D6C5AA;
     border-radius: 50%;
-    width: 140px;
-    height: 140px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    line-height: 1.2;
+    padding: 25px;
+    font-weight: 700;
+    font-size: 16px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 
-/* BUTTONS */
-.button {
-    display: inline-block;
-    padding: 14px 32px;
-    margin: 10px;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: 600;
-    transition: 0.3s ease;
-}
-
-.primary {
+/* WHAT'S NEXT */
+.next-section {
     background-color: #D6C5AA;
-    color: #4F6F81;
-}
-
-.primary:hover {
-    background-color: white;
-}
-
-/* SERVICES */
-.section-light {
-    padding: 100px 20px;
+    padding: 180px 20px 100px 20px;
     text-align: center;
-    background-color: #D6C5AA;
 }
 
-.section-light h2 {
+.next-section h2 {
     font-size: 32px;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 
-.service-item {
-    max-width: 700px;
-    margin: 0 auto 40px auto;
-    font-size: 20px;
-    font-weight: 600;
-}
-
-.service-item:after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 2px;
-    background-color: #4F6F81;
-    margin: 18px auto 0 auto;
-}
-
-/* CTA */
-.cta-band {
-    padding: 90px 20px;
-    text-align: center;
-    color: white;
-}
-
-/* PLATFORM BUTTONS */
-.platform-buttons a {
+.next-buttons a {
     display: block;
     margin: 18px auto;
     max-width: 500px;
+    padding: 14px 32px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    background-color: #4F6F81;
+    color: #D6C5AA;
+}
+
+.next-buttons a:hover {
+    opacity: 0.9;
 }
 
 /* FOOTER */
@@ -167,45 +161,18 @@ body {
     color: #D6C5AA;
     text-decoration: none;
 }
-
-.footer a:hover {
-    text-decoration: underline;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-    .navbar {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-
-    .rewards-badge {
-        position: static;
-        margin: 0 auto 30px auto;
-    }
-}
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
 <div class="navbar">
     <a href="#">About Us</a>
-    <a href="#">Gallery</a>
     <a href="#">Contact Us</a>
 </div>
 
-<!-- HERO -->
 <section class="hero texture">
-
-    <div class="rewards-badge">
-        Ask Us About Our Rewards Program
-    </div>
-
-    <img src="final logo white.svg" alt="JMY Fabrication Logo" class="logo">
-
+    <img src="final logo white.svg" class="logo">
     <h1>Full-Service Brand Growth Solutions</h1>
     <p>
         Helping businesses grow nationwide through modern branding,
@@ -213,40 +180,49 @@ body {
     </p>
 </section>
 
-<!-- SERVICES -->
-<section class="section-light">
-    <h2>What We Do</h2>
+<section class="services-section">
 
-    <div class="service-item">Marketing & Social Media Management</div>
-    <div class="service-item">Signage, Decals & Banners</div>
-    <div class="service-item">Paper Products & Print Materials</div>
-    <div class="service-item">Custom Printed & Embroidered Apparel</div>
-    <div class="service-item">Promotional Products</div>
-    <div class="service-item">Online Stores</div>
+    <div class="services-container">
+
+        <div class="service-card">
+            <h3>Marketing & Social Media</h3>
+            <p>Strategic digital campaigns, branding execution and content that drives measurable growth.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Print & Fabrication</h3>
+            <p>Signage, decals, banners and printed materials built for visibility and durability.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Apparel & Promotional</h3>
+            <p>Custom printed, embroidered and promotional products designed to elevate your brand.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Online Stores</h3>
+            <p>Custom storefronts that simplify ordering and expand your reach.</p>
+        </div>
+
+    </div>
+
+    <div class="rewards-burst">
+        Ask Us About<br>Our Rewards<br>Program
+    </div>
+
 </section>
 
-<!-- CTA -->
-<section class="cta-band texture">
-    <h2>Precision. Efficiency. Growth.</h2>
-    <p>
-        JMY Fabrication provides modern marketing and fabrication solutions
-        built to scale your business the right way.
-    </p>
-</section>
-
-<!-- PRODUCTS -->
-<section class="section-light">
+<section class="next-section">
     <h2>What's Next</h2>
 
-    <div class="platform-buttons">
-        <a href="#" class="button primary">Need a Store?</a>
-        <a href="#" class="button primary">Browse Promotional Products</a>
-        <a href="#" class="button primary">Browse Our Catalog</a>
-        <a href="#" class="button primary">Browse Apparel</a>
+    <div class="next-buttons">
+        <a href="#">Need a Store?</a>
+        <a href="#">Browse Promotional Products</a>
+        <a href="#">Browse Our Catalog</a>
+        <a href="#">Browse Apparel</a>
     </div>
 </section>
 
-<!-- FOOTER -->
 <div class="footer">
     JMY Fabrication • Based in New York • Serving Clients Nationwide<br><br>
     Email: <a href="mailto:WeGrowYou@jmyfabrication.com">WeGrowYou@jmyfabrication.com</a><br>
