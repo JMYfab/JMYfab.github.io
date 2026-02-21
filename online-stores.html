@@ -10,28 +10,10 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-<!-- ORGANIZATION SCHEMA -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "JMY Fabrication",
-  "url": "https://jmyfabrication.github.io/",
-  "email": "WeGrowYou@jmyfabrication.com",
-  "telephone": "315-767-9062",
-  "address": {
-    "@type": "PostalAddress",
-    "addressRegion": "NY",
-    "addressCountry": "US"
-  },
-  "areaServed": "US"
-}
-</script>
-
 <style>
-body { margin:0; font-family:'Montserrat', sans-serif; background:#D6C5AA; color:#222; line-height:1.6; }
+body { margin:0; font-family:'Montserrat', sans-serif; background:#D6C5AA; color:#222; line-height:1.7; }
 
-/* NAVBAR */
+/* NAVIGATION */
 .navbar {
     background:#000;
     padding:16px 30px;
@@ -39,18 +21,10 @@ body { margin:0; font-family:'Montserrat', sans-serif; background:#D6C5AA; color
     justify-content:space-between;
     align-items:center;
 }
-
-.nav-logo img {
-    height:50px;
-}
+.nav-logo img { height:50px; }
 
 .menu { position:relative; }
-
-.menu-button {
-    color:#fff;
-    font-weight:600;
-    cursor:pointer;
-}
+.menu-button { color:#fff; font-weight:600; cursor:pointer; }
 
 .dropdown {
     position:absolute;
@@ -63,7 +37,6 @@ body { margin:0; font-family:'Montserrat', sans-serif; background:#D6C5AA; color
     border-radius:6px;
     box-shadow:0 15px 35px rgba(0,0,0,0.2);
 }
-
 .dropdown a {
     padding:14px 18px;
     color:#4F6F81;
@@ -71,17 +44,31 @@ body { margin:0; font-family:'Montserrat', sans-serif; background:#D6C5AA; color
     font-weight:600;
     border-bottom:1px solid #eee;
 }
-
 .dropdown a:hover { background:#f5f5f5; }
 .menu.active .dropdown { display:flex; }
 
 /* HEADER */
-.header { background:#4F6F81; color:#fff; text-align:center; padding:70px 20px 90px; }
-.logo { max-width:180px; margin-bottom:25px; }
+.header {
+    background:#4F6F81;
+    color:#fff;
+    text-align:center;
+    padding:70px 20px 90px;
+}
+.header h1 { margin-bottom:10px; }
 
-.hero-image { max-width:1100px; margin:-60px auto 40px; padding:0 20px; }
-.hero-image img { width:100%; border-radius:10px; box-shadow:0 25px 50px rgba(0,0,0,.25); }
+/* HERO IMAGE */
+.hero-image {
+    max-width:1100px;
+    margin:-60px auto 40px;
+    padding:0 20px;
+}
+.hero-image img {
+    width:100%;
+    border-radius:10px;
+    box-shadow:0 25px 50px rgba(0,0,0,.25);
+}
 
+/* CONTENT */
 .container { max-width:900px; margin:0 auto; padding:0 20px; }
 h2 { margin-top:60px; color:#4F6F81; }
 
@@ -99,10 +86,20 @@ h2 { margin-top:60px; color:#4F6F81; }
 }
 .cta-store a:hover { transform:translateY(-4px); box-shadow:0 12px 25px rgba(0,0,0,.25); }
 
-/* FAQ */
-.faq-wrapper { background:#4F6F81; color:#fff; padding:80px 20px; margin-top:80px; }
+/* FAQ SECTION */
+.faq-wrapper {
+    background:#4F6F81;
+    color:#fff;
+    padding:80px 20px;
+    margin-top:80px;
+}
 .faq-inner { max-width:900px; margin:0 auto; }
-.faq-title { text-align:center; font-size:30px; font-weight:800; margin-bottom:50px; }
+.faq-title {
+    text-align:center;
+    font-size:30px;
+    font-weight:800;
+    margin-bottom:50px;
+}
 
 /* REWARDS */
 .rewards-highlight {
@@ -117,24 +114,24 @@ h2 { margin-top:60px; color:#4F6F81; }
     max-width:900px;
 }
 
-/* FOOTER (MATCH HOMEPAGE FORMAT) */
+/* FOOTER — MATCH HOMEPAGE STYLE */
 .footer {
     background:#111;
     color:#fff;
     text-align:center;
-    padding:60px 20px;
+    padding:70px 20px;
     margin-top:100px;
-    font-size:16px;
-    line-height:1.8;
+    line-height:1.9;
+    font-size:18px;
 }
-.footer a { color:#fff; text-decoration:none; }
+.footer strong { font-weight:600; }
 
 </style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
+<!-- NAV -->
 <div class="navbar">
     <div class="nav-logo">
         <a href="index.html">
@@ -159,11 +156,13 @@ h2 { margin-top:60px; color:#4F6F81; }
     </div>
 </div>
 
+<!-- HEADER -->
 <div class="header">
 <h1>Custom Online Stores for Businesses, Organizations & Teams</h1>
 <p>Professional branded apparel programs with managed production and fulfillment.</p>
 </div>
 
+<!-- HERO -->
 <div class="hero-image">
 <img src="0f23dcd5-d071-46e4-b901-9ab7d77c8dc1.png"
 alt="Professional business team wearing custom embroidered JMY Fabrication branded apparel">
@@ -178,26 +177,37 @@ REQUEST A STORE
 <div class="container">
 
 <p>
-JMY Fabrication builds fully customized online stores for businesses, organizations and teams across the United States. Based in New York and serving clients nationwide, we create streamlined storefront programs that eliminate the complexity of ordering branded apparel and promotional merchandise.
+JMY Fabrication builds fully customized online stores for businesses, organizations and teams across the United States. Based in New York and serving clients nationwide, we create streamlined storefront programs that eliminate the complexity of ordering branded apparel and promotional merchandise. Our online store systems are designed to support long-term brand growth, consistent presentation and professional fulfillment.
 </p>
 
 <h2>Corporate & Business Apparel Programs</h2>
 <p>
-Companies rely on our online storefront programs to centralize employee apparel ordering, maintain brand standards and simplify internal processes.
+Companies rely on our online storefront programs to centralize employee apparel ordering, maintain brand standards and simplify internal processes. Whether you operate a construction company, corporate office, healthcare organization or multi-location business, a branded online store provides consistent access to approved uniforms, polos, outerwear and promotional items. This reduces administrative time while ensuring professional brand presentation.
 </p>
 
 <h2>Team & Organization Stores</h2>
 <p>
-We design storefronts that showcase embroidered and printed apparel along with promotional merchandise supporters actually want.
+Sports teams, schools, associations and community organizations benefit from professionally managed spirit wear and merchandise programs. We design storefronts that showcase high-quality embroidered and printed apparel along with promotional merchandise supporters genuinely use and value. Parents, members and fans can order easily without your organization managing inventory or payments.
 </p>
 
 <h2>Year-Round Store Options</h2>
 <p>
-We offer both limited-time store windows and year-round storefront programs.
+Unlike limited pop-up sales, we offer year-round storefront options that allow employees and members to order whenever needed. This improves convenience, strengthens brand consistency and supports ongoing growth initiatives.
+</p>
+
+<h2>Production, Printing & Fulfillment</h2>
+<p>
+We manage screen printing, embroidery, engraving and promotional product customization. Stores can feature hats, hoodies, polos, performance wear, water bottles, key chains and other engraved items. Orders are processed efficiently with professional quality control.
+</p>
+
+<h2>Designed for Long-Term Brand Growth</h2>
+<p>
+An online apparel store is more than a sales tool — it becomes a structured brand program. Centralized ordering, approved product catalogs and professional fulfillment ensure your brand remains consistent and scalable.
 </p>
 
 </div>
 
+<!-- FAQ -->
 <div class="faq-wrapper">
 <div class="faq-inner">
 
@@ -218,6 +228,7 @@ JMY Fabrication manages production, quality control and fulfillment so your orga
 </div>
 </div>
 
+<!-- REWARDS -->
 <div class="rewards-highlight">
 ASK US ABOUT OUR REWARDS PROGRAM
 </div>
@@ -228,9 +239,9 @@ REQUEST A STORE
 </a>
 </div>
 
-<!-- FOOTER MATCHING FRONT PAGE -->
+<!-- FOOTER -->
 <div class="footer">
-JMY Fabrication • Based in New York • Serving Clients Nationwide<br>
+<strong>JMY Fabrication • Based in New York • Serving Clients Nationwide</strong><br>
 Email: WeGrowYou@jmyfabrication.com<br>
 Phone: 315-767-9062<br><br>
 © 2026 JMY Fabrication
@@ -238,7 +249,7 @@ Phone: 315-767-9062<br><br>
 
 <script>
 function toggleMenu() {
-    document.getElementById("menu").classList.toggle("active");
+document.getElementById("menu").classList.toggle("active");
 }
 </script>
 
