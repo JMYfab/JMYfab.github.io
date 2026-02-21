@@ -3,52 +3,59 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JMY Fabrication | We Grow You</title>
+<title>JMY Fabrication | Full-Service Brand Growth Solutions</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
 
 <style>
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     background-color: #D6C5AA;
-    color: #333;
+    color: #222;
 }
 
-section {
-    padding: 100px 20px;
-    text-align: center;
-}
+/* ===== HERO SECTION ===== */
 
 .hero {
-    background-color: #4F6F81;
-    background-image: url('texture.jpg');
-    background-size: cover;
-    background-blend-mode: overlay;
+    position: relative;
+    padding: 120px 20px;
+    text-align: center;
     color: white;
+    background: linear-gradient(rgba(79,111,129,0.88), rgba(79,111,129,0.88)),
+                url('texture.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .logo {
     max-width: 260px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .hero h1 {
-    font-size: 60px;
+    font-size: 54px;
     font-weight: 800;
-    letter-spacing: 4px;
-    margin-bottom: 15px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
 }
 
-.hero h2 {
-    font-weight: 400;
-    margin-bottom: 40px;
-    opacity: 0.9;
+.hero p {
+    max-width: 700px;
+    margin: 0 auto 45px auto;
+    font-size: 18px;
+    line-height: 1.6;
 }
+
+/* ===== BUTTONS ===== */
 
 .button {
     display: inline-block;
-    padding: 16px 36px;
+    padding: 16px 38px;
     margin: 12px;
     text-decoration: none;
     border-radius: 4px;
@@ -71,20 +78,30 @@ section {
 }
 
 .secondary:hover {
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255,255,255,0.15);
 }
 
-.white-section {
+/* ===== WHITE SECTIONS ===== */
+
+.section-light {
+    padding: 100px 20px;
+    text-align: center;
     background-color: #D6C5AA;
 }
+
+.section-light h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+/* ===== SERVICES GRID ===== */
 
 .services {
     max-width: 1100px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 30px;
-    margin-top: 40px;
 }
 
 .service-box {
@@ -94,29 +111,44 @@ section {
     font-weight: 600;
 }
 
-.cta {
-    background-color: #4F6F81;
-    background-image: url('texture.jpg');
-    background-size: cover;
-    background-blend-mode: overlay;
+/* ===== CTA BAND ===== */
+
+.cta-band {
+    padding: 100px 20px;
+    text-align: center;
     color: white;
+    background: linear-gradient(rgba(79,111,129,0.9), rgba(79,111,129,0.9)),
+                url('texture.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
-.cta h2 {
-    font-size: 40px;
-    margin-bottom: 40px;
+.cta-band h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
 }
+
+.cta-band p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+/* ===== PLATFORM BUTTON STACK ===== */
 
 .platform-buttons a {
     display: block;
-    margin: 15px auto;
+    margin: 18px auto;
     max-width: 500px;
 }
 
+/* ===== FOOTER ===== */
+
 .footer {
-    background-color: #222;
+    background-color: #1a1a1a;
     color: white;
-    padding: 40px 20px;
+    text-align: center;
+    padding: 50px 20px;
     font-size: 14px;
 }
 </style>
@@ -124,16 +156,21 @@ section {
 
 <body>
 
+<!-- HERO -->
 <section class="hero">
-    <img src="final logo white.svg" class="logo">
-    <h1>WE GROW YOU</h1>
-    <h2>Marketing • Fabrication • Apparel • Promotional Solutions</h2>
+    <img src="final logo white.svg" alt="JMY Fabrication Logo" class="logo">
+    <h1>FULL-SERVICE BRAND<br>GROWTH SOLUTIONS</h1>
+    <p>
+        Helping businesses grow nationwide through modern branding,
+        quality products, and streamlined online solutions.
+    </p>
     <a href="#" class="button primary">Request a Quote</a>
     <a href="#" class="button secondary">Schedule a Consultation</a>
 </section>
 
-<section class="white-section">
-    <h2 style="font-size:42px;">What We Offer</h2>
+<!-- WHAT WE OFFER -->
+<section class="section-light">
+    <h2>What We Offer</h2>
     <div class="services">
         <div class="service-box">Marketing & Social Media Management</div>
         <div class="service-box">Signage</div>
@@ -145,16 +182,18 @@ section {
     </div>
 </section>
 
-<section class="cta">
-    <h2>FULL-SERVICE BRAND GROWTH SOLUTIONS</h2>
-    <p style="max-width:700px;margin:auto;">
-        Helping businesses grow nationwide through modern branding, quality products,
-        and streamlined online solutions.
+<!-- CTA BAND -->
+<section class="cta-band">
+    <h2>Precision. Efficiency. Growth.</h2>
+    <p>
+        JMY Fabrication provides modern marketing and fabrication solutions
+        built to scale your business the right way.
     </p>
 </section>
 
-<section class="white-section">
-    <h2 style="font-size:42px;">Explore Our Platforms</h2>
+<!-- PLATFORM LINKS -->
+<section class="section-light">
+    <h2>Explore Our Platforms</h2>
     <div class="platform-buttons">
         <a href="#" class="button primary">Request a Quote</a>
         <a href="#" class="button primary">Book an Appointment</a>
@@ -163,6 +202,7 @@ section {
     </div>
 </section>
 
+<!-- FOOTER -->
 <div class="footer">
     JMY Fabrication • Based in New York • Serving Clients Nationwide<br><br>
     © 2026 JMY Fabrication
@@ -170,3 +210,4 @@ section {
 
 </body>
 </html>
+
