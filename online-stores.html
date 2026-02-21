@@ -3,348 +3,180 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Custom Online Stores for Businesses, Organizations & Teams | JMY Fabrication</title>
-
-<meta name="description" content="JMY Fabrication builds custom online stores for businesses, organizations and teams. Streamline apparel ordering, branded merchandise and employee gear with a professionally managed storefront that can stay open year-round.">
-
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
-
-<!-- FAQ SCHEMA FOR SEO BOOST -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What products can be included in our store?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Your store can include custom printed and embroidered apparel, hats, hoodies, polos and promotional merchandise including water bottles, key chains and other engraved items."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can our store stay open year-round?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. We offer both limited-time store windows and year-round storefront options."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Who handles production and fulfillment?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "JMY Fabrication manages production, quality control and fulfillment so your organization does not have to manage inventory."
-      }
-    }
-  ]
-}
-</script>
-
+<title>Online Fundraiser Stores</title>
 <style>
-* { box-sizing: border-box; }
-
 body {
+    font-family: Arial, sans-serif;
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #D6C5AA;
-    color: #222;
-    line-height: 1.6;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-/* NAVBAR */
-.navbar {
-    background-color: #000;
-    padding: 14px 30px;
-    display: flex;
-    justify-content: flex-end;
-    position: relative;
-}
-
-.menu { position: relative; }
-
-.menu-button {
-    color: #fff;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-.dropdown {
-    position: absolute;
-    right: 0;
-    top: 40px;
-    background: #ffffff;
-    min-width: 260px;
-    display: none;
-    flex-direction: column;
-    border-radius: 6px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-    overflow: hidden;
-}
-
-.dropdown a {
-    padding: 14px 18px;
-    color: #4F6F81;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
-    border-bottom: 1px solid #eee;
-}
-
-.dropdown a:hover {
-    background-color: #f5f5f5;
-}
-
-.menu.active .dropdown { display: flex; }
-
-/* HEADER */
-.header {
-    background-color: #4F6F81;
-    color: #fff;
+.hero {
+    background: #111;
+    color: white;
     text-align: center;
-    padding: 70px 20px 90px 20px;
+    padding: 60px 20px;
 }
 
-.logo {
-    max-width: 180px;
-    margin-bottom: 25px;
-}
-
-.header h1 {
-    font-size: 34px;
+.hero h1 {
+    font-size: 36px;
     margin-bottom: 15px;
 }
 
-/* HERO IMAGE */
-.hero-image {
-    max-width: 1100px;
-    margin: -60px auto 40px auto;
-    padding: 0 20px;
-}
-
-.hero-image img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 25px 50px rgba(0,0,0,0.25);
-}
-
-/* CTA BUTTON */
-.cta-store {
-    text-align: center;
-    margin: 40px 0;
-}
-
-.cta-store a {
-    background-color: #4F6F81;
-    color: #fff;
-    padding: 18px 40px;
-    text-decoration: none;
-    font-weight: 800;
-    border-radius: 4px;
+.hero p {
     font-size: 18px;
-    transition: all 0.3s ease;
-    display: inline-block;
+    max-width: 700px;
+    margin: auto;
 }
 
-.cta-store a:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+.section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
 }
 
-/* CONTENT */
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-h2 {
-    margin-top: 60px;
-    font-size: 22px;
-    color: #4F6F81;
-}
-
-/* FAQ BLUE SECTION */
-.faq-wrapper {
-    background-color: #4F6F81;
-    color: #fff;
-    padding: 80px 20px;
-    margin-top: 80px;
-}
-
-.faq-inner {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.faq-wrapper h2 {
-    color: #fff;
-    margin-top: 0;
-}
-
-.faq-item {
+.section h2 {
+    text-align: center;
     margin-bottom: 30px;
 }
 
-.faq-item h3 {
-    margin-bottom: 10px;
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
 }
 
-/* REWARDS SECTION */
-.rewards-highlight {
-    margin: 100px auto;
-    padding: 60px 30px;
-    background-color: #4F6F81;
-    color: #fff;
-    text-align: center;
-    font-weight: 800;
-    font-size: 26px;
+.card {
+    background: white;
+    padding: 25px;
     border-radius: 8px;
-    max-width: 900px;
-    box-shadow: 0 20px 45px rgba(0,0,0,0.25);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.rewards-subtext {
-    max-width: 700px;
-    margin: 25px auto 0 auto;
-    font-weight: 600;
-    font-size: 16px;
-}
-
-/* FOOTER */
-.footer {
-    background-color: #1a1a1a;
-    color: white;
+.buttons {
     text-align: center;
-    padding: 40px 20px;
-    margin-top: 100px;
+    margin-top: 40px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 10px;
+    background: #c8102e;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #a00d24;
+}
+
+.faq-item {
+    margin-bottom: 25px;
+}
+
+.faq-item h4 {
+    margin-bottom: 8px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="navbar">
-    <div class="menu" id="menu">
-        <div class="menu-button" onclick="toggleMenu()">Menu ▾</div>
-        <div class="dropdown">
-            <a href="index.html">Home</a>
-            <a href="online-stores.html">Need a Store?</a>
-        </div>
-    </div>
+<div class="hero">
+    <h1>Online Fundraiser & Team Stores</h1>
+    <p>
+        Raise money the easy way with a custom online apparel store. 
+        No inventory, no collecting money, no stress — we handle everything.
+    </p>
 </div>
 
-<div class="header">
-    <a href="index.html">
-        <img src="final logo white.svg" alt="JMY Fabrication Logo" class="logo">
-    </a>
-    <h1>Custom Online Stores for Businesses, Organizations & Teams</h1>
-    <p>Streamlined apparel ordering. Branded merchandise. Zero inventory hassle.</p>
-</div>
-
-<div class="hero-image">
-    <img src="0f23dcd5-d071-46e4-b901-9ab7d77c8dc1.png"
-         alt="Professional business team wearing custom embroidered JMY Fabrication branded apparel">
-</div>
-
-<div class="cta-store">
-    <a href="https://form.jotform.com/260514722237149" target="_blank">
-        REQUEST A STORE
-    </a>
-</div>
-
-<div class="container">
-
-    <p>
-        JMY Fabrication designs and manages fully customized online stores for businesses,
-        organizations and teams. We eliminate the hassle of inventory management,
-        collecting payments and coordinating fulfillment so you can focus on growth.
-    </p>
-
-    <h2>Professional Company Apparel Stores</h2>
-    <p>
-        Provide employees with a branded storefront featuring approved apparel,
-        uniforms and promotional merchandise.
-    </p>
-
-    <h2>Team & Organization Stores</h2>
-    <p>
-        Launch a professionally built store for sports teams, schools,
-        associations and community groups.
-    </p>
-
-    <h2>Year-Round Store Options</h2>
-    <p>
-        Keep your online store open year-round so employees, members or supporters
-        can order anytime.
-    </p>
-
+<div class="section">
     <h2>How It Works</h2>
-    <p>
-        We build the store, upload products, manage orders and handle fulfillment.
-    </p>
-
-</div>
-
-<!-- FAQ BLUE SECTION -->
-<div class="faq-wrapper">
-    <div class="faq-inner">
-        <h2>Frequently Asked Questions</h2>
-
-        <div class="faq-item">
-            <h3>What products can be included in our store?</h3>
+    <div class="steps">
+        <div class="card">
+            <h3>1. We Build Your Store</h3>
             <p>
-                Your store can include custom printed and embroidered apparel,
-                hats, hoodies, polos and promotional merchandise including
-                water bottles, key chains and other engraved items.
+                We design and set up your custom online store with approved apparel,
+                logos, and pricing.
             </p>
         </div>
-
-        <div class="faq-item">
-            <h3>Can our store stay open year-round?</h3>
+        <div class="card">
+            <h3>2. You Share the Link</h3>
             <p>
-                Yes. We offer both limited-time store windows and year-round storefront options.
+                Share the store link with parents, players, staff, or supporters.
+                Orders are placed and paid for online.
             </p>
         </div>
-
-        <div class="faq-item">
-            <h3>Who handles production and fulfillment?</h3>
+        <div class="card">
+            <h3>3. We Produce & Deliver</h3>
             <p>
-                JMY Fabrication manages production, quality control and fulfillment
-                so your organization does not have to manage inventory.
+                Once the store closes, we decorate all items and distribute them
+                for pickup or group delivery.
+            </p>
+        </div>
+        <div class="card">
+            <h3>4. You Get Paid</h3>
+            <p>
+                After production, we send your organization its fundraiser profit.
+                Simple and transparent.
             </p>
         </div>
     </div>
-</div>
 
-<!-- RESTORED REWARDS -->
-<div class="rewards-highlight">
-    ASK US ABOUT OUR REWARDS PROGRAM
-    <div class="rewards-subtext">
-        Earn value back through your online store with our exclusive rewards program
-        designed to support businesses and organizations long-term.
+    <div class="buttons">
+        <a href="https://form.jotform.com/260514722237149" class="btn">Request a Store</a>
+        <a href="https://form.jotform.com/260514722237149" class="btn">Contact Us About a Store</a>
     </div>
 </div>
 
-<div class="cta-store">
-    <a href="https://form.jotform.com/260514722237149" target="_blank">
-        REQUEST A STORE
-    </a>
+<div class="section">
+    <h2>Why Choose Our Online Stores?</h2>
+    <ul>
+        <li>No upfront costs</li>
+        <li>No collecting money</li>
+        <li>No inventory to manage</li>
+        <li>Professional embroidery & print quality</li>
+        <li>Transparent profit structure</li>
+    </ul>
 </div>
 
-<div class="footer">
-    JMY Fabrication • Serving Clients Nationwide<br><br>
-    WeGrowYou@jmyfabrication.com • 315-767-9062
-</div>
+<div class="section">
+    <h2>Frequently Asked Questions</h2>
 
-<script>
-function toggleMenu() {
-    document.getElementById("menu").classList.toggle("active");
-}
-</script>
+    <div class="faq-item">
+        <h4>How long does the store stay open?</h4>
+        <p>Most stores run for 10–14 days, but we can adjust based on your needs.</p>
+    </div>
+
+    <div class="faq-item">
+        <h4>Is there a minimum order?</h4>
+        <p>No minimum for the group — each supporter orders individually.</p>
+    </div>
+
+    <div class="faq-item">
+        <h4>How are fundraiser profits calculated?</h4>
+        <p>
+            Each item includes a built-in fundraiser margin. After the store closes
+            and production is complete, we send a payout summary and check.
+        </p>
+    </div>
+
+    <div class="faq-item">
+        <h4>What products can we offer?</h4>
+        <p>
+            We offer embroidered polos, hoodies, hats, tees, jackets, and more.
+            We can also include promotional merchandise such as water bottles,
+            key chains, and other engraved items.
+        </p>
+    </div>
+
+</div>
 
 </body>
 </html>
