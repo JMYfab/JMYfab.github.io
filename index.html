@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JMY Fabrication | Full-Service Brand Growth Solutions</title>
+<title>JMY Fabrication | Brand Growth Solutions</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -17,44 +17,82 @@ body {
     color: #222;
 }
 
-/* ===== TEXTURE OVERLAY ===== */
-.texture {
+/* NAVIGATION */
+.navbar {
     background-color: #4F6F81;
-    background-image: 
-        linear-gradient(rgba(79,111,129,0.92), rgba(79,111,129,0.92)),
-        url("https://www.transparenttextures.com/patterns/old-paper.png");
-    background-repeat: repeat;
-    background-size: auto;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
 }
 
-/* ===== HERO ===== */
+.navbar a {
+    color: #D6C5AA;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+}
 
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* TEXTURE */
+.texture {
+    background-color: #4F6F81;
+    background-image:
+        linear-gradient(rgba(79,111,129,0.9), rgba(79,111,129,0.9)),
+        url("https://www.transparenttextures.com/patterns/old-paper.png");
+    background-repeat: repeat;
+}
+
+/* HERO */
 .hero {
-    color: white;
     text-align: center;
-    padding: 100px 20px;
+    padding: 110px 20px;
+    color: #D6C5AA;
+    position: relative;
 }
 
 .logo {
     max-width: 240px;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
 }
 
 .hero h1 {
-    font-size: 32px;
+    font-size: 34px;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .hero p {
     max-width: 700px;
-    margin: 0 auto 40px auto;
-    line-height: 1.6;
+    margin: 0 auto 35px auto;
     font-size: 16px;
+    line-height: 1.6;
 }
 
-/* ===== BUTTONS ===== */
+/* REWARDS BADGE */
+.rewards-badge {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background-color: #D6C5AA;
+    color: #4F6F81;
+    padding: 14px 18px;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.2;
+}
 
+/* BUTTONS */
 .button {
     display: inline-block;
     padding: 14px 32px;
@@ -74,69 +112,49 @@ body {
     background-color: white;
 }
 
-/* ===== LIGHT SECTION ===== */
-
+/* SERVICES */
 .section-light {
-    padding: 90px 20px;
+    padding: 100px 20px;
     text-align: center;
     background-color: #D6C5AA;
 }
 
 .section-light h2 {
-    font-size: 34px;
-    margin-bottom: 40px;
+    font-size: 32px;
+    margin-bottom: 60px;
 }
 
-/* ===== SERVICES LIST ===== */
-
-.services {
-    max-width: 900px;
-    margin: auto;
-    text-align: left;
-    columns: 2;
-    column-gap: 60px;
+.service-item {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    font-size: 20px;
+    font-weight: 600;
 }
 
-.services p {
-    font-size: 18px;
-    margin-bottom: 18px;
+.service-item:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: #4F6F81;
+    margin: 18px auto 0 auto;
 }
 
-.check {
-    color: #4F6F81;
-    font-weight: bold;
-    margin-right: 8px;
-}
-
-/* ===== CTA BAND ===== */
-
+/* CTA */
 .cta-band {
-    color: white;
     padding: 90px 20px;
     text-align: center;
+    color: white;
 }
 
-.cta-band h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-}
-
-.cta-band p {
-    max-width: 700px;
-    margin: auto;
-    line-height: 1.6;
-}
-
-/* ===== PLATFORM BUTTONS ===== */
-
+/* PLATFORM BUTTONS */
 .platform-buttons a {
     display: block;
     margin: 18px auto;
     max-width: 500px;
 }
 
-/* ===== FOOTER ===== */
-
+/* FOOTER */
 .footer {
     background-color: #1a1a1a;
     color: white;
@@ -144,14 +162,50 @@ body {
     padding: 50px 20px;
     font-size: 14px;
 }
+
+.footer a {
+    color: #D6C5AA;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .navbar {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .rewards-badge {
+        position: static;
+        margin: 0 auto 30px auto;
+    }
+}
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
+<div class="navbar">
+    <a href="#">About Us</a>
+    <a href="#">Gallery</a>
+    <a href="#">Contact Us</a>
+</div>
+
 <!-- HERO -->
 <section class="hero texture">
+
+    <div class="rewards-badge">
+        Ask Us About Our Rewards Program
+    </div>
+
     <img src="final logo white.svg" alt="JMY Fabrication Logo" class="logo">
+
     <h1>Full-Service Brand Growth Solutions</h1>
     <p>
         Helping businesses grow nationwide through modern branding,
@@ -159,22 +213,19 @@ body {
     </p>
 </section>
 
-<!-- WHAT WE OFFER -->
+<!-- SERVICES -->
 <section class="section-light">
-    <h2>What We Offer</h2>
-    <div class="services">
-        <p><span class="check">✔</span>Marketing & Social Media Management</p>
-        <p><span class="check">✔</span>Signage</p>
-        <p><span class="check">✔</span>Decals</p>
-        <p><span class="check">✔</span>Banners</p>
-        <p><span class="check">✔</span>Paper Products</p>
-        <p><span class="check">✔</span>Custom Printed Apparel</p>
-        <p><span class="check">✔</span>Embroidered Apparel</p>
-        <p><span class="check">✔</span>Promotional Products</p>
-    </div>
+    <h2>What We Do</h2>
+
+    <div class="service-item">Marketing & Social Media Management</div>
+    <div class="service-item">Signage, Decals & Banners</div>
+    <div class="service-item">Paper Products & Print Materials</div>
+    <div class="service-item">Custom Printed & Embroidered Apparel</div>
+    <div class="service-item">Promotional Products</div>
+    <div class="service-item">Online Stores</div>
 </section>
 
-<!-- CTA BAND -->
+<!-- CTA -->
 <section class="cta-band texture">
     <h2>Precision. Efficiency. Growth.</h2>
     <p>
@@ -185,16 +236,21 @@ body {
 
 <!-- PRODUCTS -->
 <section class="section-light">
-    <h2>Check Out Some of the Products We Have to Offer</h2>
+    <h2>What's Next</h2>
+
     <div class="platform-buttons">
         <a href="#" class="button primary">Need a Store?</a>
         <a href="#" class="button primary">Browse Promotional Products</a>
         <a href="#" class="button primary">Browse Our Catalog</a>
+        <a href="#" class="button primary">Browse Apparel</a>
     </div>
 </section>
 
+<!-- FOOTER -->
 <div class="footer">
     JMY Fabrication • Based in New York • Serving Clients Nationwide<br><br>
+    Email: <a href="mailto:WeGrowYou@jmyfabrication.com">WeGrowYou@jmyfabrication.com</a><br>
+    Phone: <a href="tel:3157679062">315-767-9062</a><br><br>
     © 2026 JMY Fabrication
 </div>
 
