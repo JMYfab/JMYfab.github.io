@@ -10,106 +10,84 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-<!-- ORGANIZATION SCHEMA -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "JMY Fabrication",
-  "url": "https://jmyfabrication.github.io/",
-  "email": "WeGrowYou@jmyfabrication.com",
-  "telephone": "315-767-9062",
-  "address": {
-    "@type": "PostalAddress",
-    "addressRegion": "NY",
-    "addressCountry": "US"
-  },
-  "areaServed": "US"
-}
-</script>
-
-<!-- FAQ SCHEMA -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What products can be included in our store?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Your store can include custom printed and embroidered apparel, hats, hoodies, polos and promotional merchandise including water bottles, key chains and other engraved items."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can our store stay open year-round?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. We offer both limited-time store windows and year-round storefront options."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Who handles production and fulfillment?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "JMY Fabrication manages production, quality control and fulfillment so your organization does not need to manage inventory or logistics."
-      }
-    }
-  ]
-}
-</script>
-
 <style>
+* { box-sizing: border-box; }
 body { margin:0; font-family:'Montserrat', sans-serif; background:#D6C5AA; color:#222; line-height:1.6; }
 
 /* NAVBAR */
 .navbar {
-    background:#000;
+    background-color:#000;
     padding:14px 30px;
     display:flex;
     justify-content:flex-end;
     position:relative;
 }
+
 .menu { position:relative; }
-.menu-button { color:#fff; font-weight:600; cursor:pointer; }
+
+.menu-button {
+    color:#fff;
+    font-weight:600;
+    cursor:pointer;
+}
+
 .dropdown {
     position:absolute;
     right:0;
     top:40px;
-    background:#fff;
+    background:#ffffff;
     min-width:260px;
     display:none;
     flex-direction:column;
     border-radius:6px;
-    box-shadow:0 15px 35px rgba(0,0,0,.2);
+    box-shadow:0 15px 35px rgba(0,0,0,0.2);
+    overflow:hidden;
 }
+
 .dropdown a {
     padding:14px 18px;
     color:#4F6F81;
     text-decoration:none;
+    font-size:14px;
     font-weight:600;
     border-bottom:1px solid #eee;
 }
+
 .dropdown a:hover { background:#f5f5f5; }
+
 .menu.active .dropdown { display:flex; }
 
 /* HEADER */
-.header { background:#4F6F81; color:#fff; text-align:center; padding:70px 20px 90px; }
-.logo { max-width:180px; margin-bottom:25px; }
+.header {
+    background-color:#4F6F81;
+    color:#fff;
+    text-align:center;
+    padding:70px 20px 90px 20px;
+}
+
+.logo {
+    max-width:180px;
+    margin-bottom:25px;
+}
+
+.header h1 { margin-bottom:15px; }
 
 /* HERO IMAGE */
-.hero-image { max-width:1100px; margin:-60px auto 40px; padding:0 20px; }
-.hero-image img { width:100%; border-radius:10px; box-shadow:0 25px 50px rgba(0,0,0,.25); }
+.hero-image {
+    max-width:1100px;
+    margin:-60px auto 40px auto;
+    padding:0 20px;
+}
 
-/* CONTENT */
-.container { max-width:900px; margin:0 auto; padding:0 20px; }
-h2 { margin-top:60px; color:#4F6F81; }
+.hero-image img {
+    width:100%;
+    border-radius:10px;
+    box-shadow:0 25px 50px rgba(0,0,0,0.25);
+}
 
-/* CTA BUTTON */
+/* CTA */
 .cta-store { text-align:center; margin:40px 0; }
+
 .cta-store a {
     background:#4F6F81;
     color:#fff;
@@ -121,12 +99,32 @@ h2 { margin-top:60px; color:#4F6F81; }
     transition:.3s;
     display:inline-block;
 }
-.cta-store a:hover { transform:translateY(-4px); box-shadow:0 12px 25px rgba(0,0,0,.25); }
 
-/* FAQ SECTION */
-.faq-wrapper { background:#4F6F81; color:#fff; padding:80px 20px; margin-top:80px; }
+.cta-store a:hover {
+    transform:translateY(-4px);
+    box-shadow:0 12px 25px rgba(0,0,0,.25);
+}
+
+/* CONTENT */
+.container { max-width:900px; margin:0 auto; padding:0 20px; }
+h2 { margin-top:60px; color:#4F6F81; }
+
+/* FAQ */
+.faq-wrapper {
+    background:#4F6F81;
+    color:#fff;
+    padding:80px 20px;
+    margin-top:80px;
+}
+
 .faq-inner { max-width:900px; margin:0 auto; }
-.faq-title { text-align:center; font-size:30px; font-weight:800; margin-bottom:50px; }
+
+.faq-title {
+    text-align:center;
+    font-size:30px;
+    font-weight:800;
+    margin-bottom:50px;
+}
 
 /* REWARDS */
 .rewards-highlight {
@@ -141,16 +139,27 @@ h2 { margin-top:60px; color:#4F6F81; }
     max-width:900px;
     box-shadow:0 20px 45px rgba(0,0,0,.25);
 }
-.rewards-subtext { max-width:700px; margin:25px auto 0; font-weight:600; font-size:16px; }
 
-/* FOOTER */
+.rewards-subtext {
+    max-width:700px;
+    margin:25px auto 0;
+    font-weight:600;
+    font-size:16px;
+}
+
+/* FOOTER — MATCHES HOMEPAGE EXACTLY */
 .footer {
-    background:#111;
-    color:#fff;
+    background-color:#1a1a1a;
+    color:white;
     text-align:center;
     padding:50px 20px;
+    font-size:14px;
 }
-.footer strong { font-size:18px; }
+
+.footer a {
+    color:#D6C5AA;
+    text-decoration:none;
+}
 </style>
 </head>
 
@@ -158,21 +167,21 @@ h2 { margin-top:60px; color:#4F6F81; }
 
 <!-- NAVIGATION -->
 <div class="navbar">
-<div class="menu" id="menu">
-<div class="menu-button" onclick="toggleMenu()">Menu ▾</div>
-<div class="dropdown">
-<a href="index.html">Home</a>
-<a href="index.html#services">What We Offer</a>
-<a href="online-stores.html">Need a Store?</a>
-<a href="#">Request a Quote</a>
-<a href="#">Schedule an Appointment</a>
-<a href="#">Browse Promotional Products</a>
-<a href="#">Browse Our Catalog</a>
-<a href="#">Browse Apparel</a>
-<a href="#">About Us</a>
-<a href="#">Contact Us</a>
-</div>
-</div>
+    <div class="menu" id="menu">
+        <div class="menu-button" onclick="toggleMenu()">Menu ▾</div>
+        <div class="dropdown">
+            <a href="index.html">Home</a>
+            <a href="index.html#services">What We Offer</a>
+            <a href="online-stores.html">Need a Store?</a>
+            <a href="#">Request a Quote</a>
+            <a href="#">Schedule an Appointment</a>
+            <a href="#">Browse Promotional Products</a>
+            <a href="#">Browse Our Catalog</a>
+            <a href="#">Browse Apparel</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </div>
 </div>
 
 <!-- HEADER -->
@@ -196,31 +205,31 @@ REQUEST A STORE
 </a>
 </div>
 
-<!-- SEO CONTENT -->
+<!-- CONTENT -->
 <div class="container">
 
 <p>
-JMY Fabrication builds fully customized online stores for businesses, organizations and teams across the United States. Based in New York and serving clients nationwide, we create streamlined storefront programs that eliminate the complexity of ordering branded apparel and promotional merchandise while maintaining high production standards.
+JMY Fabrication builds fully customized online stores for businesses, organizations and teams across the United States. Based in New York and serving clients nationwide, we create streamlined storefront programs that eliminate the complexity of ordering branded apparel and promotional merchandise.
 </p>
 
 <h2>Corporate & Business Apparel Programs</h2>
 <p>
-Our online storefront programs allow businesses to centralize employee apparel ordering, maintain brand consistency and simplify internal processes. Companies across multiple industries use our system to manage uniforms, branded polos, outerwear and promotional merchandise without the burden of handling inventory.
+Our online storefront programs centralize employee apparel ordering, maintain brand standards and simplify internal processes.
 </p>
 
 <h2>Team & Organization Stores</h2>
 <p>
-Sports teams, schools and community organizations benefit from professionally managed spirit wear and merchandise programs. We design clean, easy-to-use storefronts that showcase high-quality embroidered and printed apparel along with promotional merchandise supporters actually want to wear.
+We design clean, professional storefronts for sports teams, schools and community organizations.
 </p>
 
 <h2>Year-Round Store Options</h2>
 <p>
-We offer both limited-time store windows and year-round storefront programs. Year-round options provide convenience, improve brand consistency and reduce administrative workload.
+We offer both limited-time store windows and year-round storefront programs for long-term consistency.
 </p>
 
 <h2>Production & Fulfillment</h2>
 <p>
-We manage production, printing, embroidery, engraving and order fulfillment. Stores can include hats, hoodies, polos, water bottles, key chains and other engraved items — all produced with professional quality control standards.
+Stores can include custom printed and embroidered apparel, hats, hoodies, polos and promotional merchandise including water bottles, key chains and other engraved items.
 </p>
 
 </div>
@@ -228,11 +237,8 @@ We manage production, printing, embroidery, engraving and order fulfillment. Sto
 <!-- FAQ -->
 <div class="faq-wrapper">
 <div class="faq-inner">
-<div class="faq-title">Frequently Asked Questions</div>
 
-<p><strong>What products can be included in our store?</strong><br>
-Your store can include custom printed and embroidered apparel, hats, hoodies, polos and promotional merchandise including water bottles, key chains and other engraved items.
-</p>
+<div class="faq-title">Frequently Asked Questions</div>
 
 <p><strong>Can our store stay open year-round?</strong><br>
 Yes. We offer both limited-time store windows and year-round storefront options.
@@ -253,24 +259,17 @@ Earn long-term value through our exclusive rewards program designed to support b
 </div>
 </div>
 
-<div class="cta-store">
-<a href="https://form.jotform.com/260514722237149" target="_blank">
-REQUEST A STORE
-</a>
-</div>
-
-<!-- FOOTER -->
+<!-- FOOTER (MATCHED) -->
 <div class="footer">
-<strong>JMY Fabrication</strong><br>
-Based in New York • Serving Clients Nationwide<br><br>
-Email: WeGrowYou@jmyfabrication.com<br>
-Phone: 315-767-9062<br><br>
-© 2026 JMY Fabrication
+    JMY Fabrication • Based in New York • Serving Clients Nationwide<br><br>
+    Email: <a href="mailto:WeGrowYou@jmyfabrication.com">WeGrowYou@jmyfabrication.com</a><br>
+    Phone: <a href="tel:3157679062">315-767-9062</a><br><br>
+    © 2026 JMY Fabrication
 </div>
 
 <script>
 function toggleMenu() {
-document.getElementById("menu").classList.toggle("active");
+    document.getElementById("menu").classList.toggle("active");
 }
 </script>
 
