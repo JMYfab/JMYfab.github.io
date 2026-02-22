@@ -10,9 +10,24 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 
+<!-- ORGANIZATION SCHEMA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "JMY Fabrication",
+  "url": "https://jmyfabrication.github.io/",
+  "foundingDate": "2019",
+  "email": "WeGrowYou@jmyfabrication.com",
+  "telephone": "315-767-9062",
+  "areaServed": "US",
+  "description": "JMY Fabrication provides strategic brand growth solutions including custom apparel, signage, promotional products, and professionally managed online store programs for businesses and organizations nationwide."
+}
+</script>
+
 <style>
 * { box-sizing: border-box; }
-body { margin:0; font-family:'Montserrat', sans-serif; background:#D6C5AA; color:#222; line-height:1.75; }
+body { margin:0; font-family:'Montserrat', sans-serif; background:#D6C5AA; color:#222; line-height:1.8; }
 
 /* NAVBAR (shared header styles) */
 .navbar {
@@ -51,74 +66,102 @@ body { margin:0; font-family:'Montserrat', sans-serif; background:#D6C5AA; color
 .about-hero {
     background:#4F6F81;
     color:#fff;
-    padding:110px 20px;
+    padding:120px 20px 100px;
     text-align:center;
 }
 
 .logo {
     max-width:200px;
-    margin-bottom:30px;
+    margin-bottom:35px;
 }
 
 .about-hero h1 {
-    font-size:38px;
+    font-size:40px;
     margin-bottom:25px;
 }
 
 .about-hero p {
-    max-width:800px;
+    max-width:850px;
     margin:auto;
     font-weight:600;
     font-size:18px;
 }
 
+/* CREDIBILITY STRIP */
+.credibility-strip {
+    background:#CBB894;
+    padding:50px 20px;
+}
+
+.credibility-container {
+    max-width:1000px;
+    margin:auto;
+    display:flex;
+    justify-content:space-around;
+    text-align:center;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+.cred-item h3 {
+    margin:0;
+    font-size:28px;
+    color:#4F6F81;
+}
+
+.cred-item p {
+    margin:8px 0 0;
+    font-weight:600;
+}
+
 /* CONTENT */
 .container {
     max-width:950px;
-    margin:90px auto;
+    margin:100px auto;
     padding:0 20px;
 }
 
 .container h2 {
-    margin-top:70px;
+    margin-top:80px;
+    margin-bottom:20px;
     color:#4F6F81;
-    font-size:26px;
+    font-size:28px;
 }
 
 .lead-text {
-    font-size:18px;
+    font-size:19px;
     font-weight:600;
+    margin-bottom:40px;
 }
 
 /* BLUE AUTHORITY BAND */
 .authority-band {
     background:#4F6F81;
     color:#ffffff;
-    padding:100px 20px;
-    margin-top:90px;
+    padding:110px 20px;
     text-align:center;
 }
 
 .authority-band h2 {
-    font-size:28px;
-    margin-bottom:25px;
+    font-size:30px;
+    margin-bottom:30px;
 }
 
 .authority-band p {
-    max-width:800px;
+    max-width:850px;
     margin:auto;
 }
 
 /* CTA */
 .cta-section {
     text-align:center;
-    margin:100px 0;
+    margin:110px 0;
 }
 
 .cta-section a {
     background:#4F6F81;
     color:#fff;
-    padding:18px 44px;
+    padding:18px 50px;
     text-decoration:none;
     font-weight:800;
     border-radius:4px;
@@ -143,6 +186,14 @@ body { margin:0; font-family:'Montserrat', sans-serif; background:#D6C5AA; color
     color:#D6C5AA;
     text-decoration:none;
 }
+
+/* MOBILE */
+@media(max-width:768px){
+    .credibility-container {
+        flex-direction:column;
+        align-items:center;
+    }
+}
 </style>
 </head>
 
@@ -159,6 +210,24 @@ body { margin:0; font-family:'Montserrat', sans-serif; background:#D6C5AA; color
     </p>
 </section>
 
+<!-- CREDIBILITY STRIP -->
+<section class="credibility-strip">
+    <div class="credibility-container">
+        <div class="cred-item">
+            <h3>25+ Years</h3>
+            <p>Industry Experience</p>
+        </div>
+        <div class="cred-item">
+            <h3>Founded 2019</h3>
+            <p>Growth-Focused From Day One</p>
+        </div>
+        <div class="cred-item">
+            <h3>Nationwide</h3>
+            <p>Clients & Partnerships</p>
+        </div>
+    </div>
+</section>
+
 <div class="container">
 
 <p class="lead-text">
@@ -167,20 +236,12 @@ With more than 25 years of experience in marketing, signage, custom apparel, and
 
 <h2>Built on Experience — Not Trends</h2>
 <p>
-JMY Fabrication was created after recognizing a gap in the market. Many providers focus solely on production. We focus on growth. Every project — whether apparel, signage, promotional merchandise, or a fully managed online store — is executed with the understanding that it represents your brand in the marketplace.
-</p>
-
-<p>
-Our background in marketing ensures that what we produce aligns with a larger strategic objective. Our fabrication expertise ensures it is executed with precision, durability, and consistency.
+JMY Fabrication was created after recognizing a gap in the market. Many providers focus solely on production. We focus on growth. Every project represents your brand in the marketplace.
 </p>
 
 <h2>Operational Strength & Scalable Solutions</h2>
 <p>
-We specialize in custom printed and embroidered apparel, signage systems, banners, decals, promotional merchandise, and professionally managed online store programs for businesses, teams, and organizations.
-</p>
-
-<p>
-Our systems are built to scale — whether supporting internal company apparel programs, multi-location branding rollouts, seasonal campaigns, or long-term storefront solutions that remain open year-round. We bring structure, reliability, and professionalism to every engagement.
+We specialize in custom printed and embroidered apparel, signage systems, banners, decals, promotional merchandise, and professionally managed online store programs built for scale and long-term brand consistency.
 </p>
 
 <h2>Family-Run. Relationship-Driven.</h2>
@@ -189,11 +250,7 @@ As a family-run business, we believe growth is built on relationships. When you 
 </p>
 
 <p>
-We treat our clients as an extension of our own team. As your business grows, we grow alongside you — building consistency, trust, and shared success over time.
-</p>
-
-<p>
-Our approach combines personal accountability with professional standards, ensuring that every project reflects the quality and integrity behind our name.
+We treat our clients as part of the family as we grow together — combining personal accountability with professional standards.
 </p>
 
 </div>
@@ -215,7 +272,6 @@ Our approach combines personal accountability with professional standards, ensur
 function toggleMenu() {
     document.getElementById("menu").classList.toggle("active");
 }
-
 function loadHTML(id, file) {
     fetch(file)
         .then(response => response.text())
@@ -223,7 +279,6 @@ function loadHTML(id, file) {
             document.getElementById(id).innerHTML = data;
         });
 }
-
 loadHTML("header-placeholder", "header.html");
 loadHTML("footer-placeholder", "footer.html");
 </script>
