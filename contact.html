@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact JMY Fabrication | Brand Growth & Custom Production</title>
+
+<meta name="description" content="Contact JMY Fabrication for custom apparel, signage, promotional products, online stores, and brand growth solutions. Serving businesses and organizations nationwide.">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+* { box-sizing: border-box; }
+body { margin:0; font-family:'Montserrat', sans-serif; background:#D6C5AA; color:#222; line-height:1.8; }
+
+/* NAVBAR (shared header styles) */
+.navbar {
+    background-color:#000;
+    padding:14px 30px;
+    display:flex;
+    justify-content:flex-end;
+    position:relative;
+}
+.menu { position:relative; }
+.menu-button { color:#fff; font-weight:600; cursor:pointer; }
+.dropdown {
+    position:absolute;
+    right:0;
+    top:40px;
+    background:#ffffff;
+    min-width:260px;
+    display:none;
+    flex-direction:column;
+    border-radius:6px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.2);
+    overflow:hidden;
+}
+.dropdown a {
+    padding:14px 18px;
+    color:#4F6F81;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+    border-bottom:1px solid #eee;
+}
+.dropdown a:hover { background:#f5f5f5; }
+.menu.active .dropdown { display:flex; }
+
+/* HERO */
+.contact-hero {
+    background:#4F6F81;
+    color:#fff;
+    padding:120px 20px 100px;
+    text-align:center;
+}
+
+.contact-hero h1 {
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.contact-hero p {
+    max-width:750px;
+    margin:auto;
+    font-weight:600;
+    font-size:18px;
+}
+
+/* CONTENT */
+.container {
+    max-width:900px;
+    margin:100px auto;
+    padding:0 20px;
+}
+
+.contact-box {
+    background:#CBB894;
+    padding:60px;
+    border-radius:6px;
+}
+
+.contact-box h2 {
+    margin-top:0;
+    color:#4F6F81;
+}
+
+.contact-details {
+    margin-top:30px;
+}
+
+.contact-details p {
+    font-size:18px;
+    margin:10px 0;
+}
+
+/* CTA BUTTONS */
+.button-group {
+    margin-top:40px;
+}
+
+.button-group a {
+    display:inline-block;
+    margin:10px 15px 0 0;
+    padding:16px 36px;
+    text-decoration:none;
+    font-weight:700;
+    border-radius:4px;
+    background:#4F6F81;
+    color:#fff;
+    transition:.3s;
+}
+
+.button-group a:hover {
+    transform:translateY(-4px);
+    box-shadow:0 12px 25px rgba(0,0,0,.25);
+}
+
+/* FOOTER */
+.footer {
+    background-color:#1a1a1a;
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+    font-size:14px;
+}
+.footer a {
+    color:#D6C5AA;
+    text-decoration:none;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .contact-box { padding:35px; }
+}
+</style>
+</head>
+
+<body>
+
+<div id="header-placeholder"></div>
+
+<section class="contact-hero">
+    <h1>Let’s Build Something That Grows</h1>
+    <p>
+        Whether you need custom apparel, signage, promotional products, or a fully managed online store,
+        JMY Fabrication is ready to support your next stage of growth.
+    </p>
+</section>
+
+<div class="container">
+    <div class="contact-box">
+
+        <h2>Contact Information</h2>
+
+        <div class="contact-details">
+            <p><strong>Email:</strong> <a href="mailto:WeGrowYou@jmyfabrication.com">WeGrowYou@jmyfabrication.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:3157679062">315-767-9062</a></p>
+            <p><strong>Serving:</strong> Businesses & Organizations Nationwide</p>
+        </div>
+
+        <div class="button-group">
+            <a href="https://form.jotform.com/260214275377053" target="_blank">Request a Quote</a>
+            <a href="https://calendly.com/jmyfabrication/1-hour-meeting-on-site" target="_blank">Schedule an Appointment</a>
+        </div>
+
+    </div>
+</div>
+
+<div id="footer-placeholder"></div>
+
+<script>
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+}
+function loadHTML(id, file) {
+    fetch(file)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById(id).innerHTML = data;
+        });
+}
+loadHTML("header-placeholder", "header.html");
+loadHTML("footer-placeholder", "footer.html");
+</script>
+
+</body>
+</html>
