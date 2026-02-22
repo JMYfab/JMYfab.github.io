@@ -14,7 +14,7 @@
 * { box-sizing: border-box; }
 body { margin:0; font-family:'Montserrat', sans-serif; background:#D6C5AA; color:#222; line-height:1.6; }
 
-/* NAVBAR */
+/* NAVBAR styles (used by header.html) */
 .navbar {
     background-color:#000;
     padding:14px 30px;
@@ -147,7 +147,7 @@ h2 { margin-top:60px; color:#4F6F81; }
     font-size:16px;
 }
 
-/* FOOTER — MATCHES HOMEPAGE EXACTLY */
+/* FOOTER styles (used by footer.html) */
 .footer {
     background-color:#1a1a1a;
     color:white;
@@ -165,26 +165,9 @@ h2 { margin-top:60px; color:#4F6F81; }
 
 <body>
 
-<!-- NAVIGATION -->
-<div class="navbar">
-    <div class="menu" id="menu">
-        <div class="menu-button" onclick="toggleMenu()">Menu ▾</div>
-        <div class="dropdown">
-            <a href="index.html">Home</a>
-            <a href="index.html#services">What We Offer</a>
-            <a href="online-stores.html">Need a Store?</a>
-            <a href="#">Request a Quote</a>
-            <a href="#">Schedule an Appointment</a>
-            <a href="#">Browse Promotional Products</a>
-            <a href="#">Browse Our Catalog</a>
-            <a href="#">Browse Apparel</a>
-            <a href="#">About Us</a>
-            <a href="#">Contact Us</a>
-        </div>
-    </div>
-</div>
+<!-- SHARED HEADER -->
+<div id="header-placeholder"></div>
 
-<!-- HEADER -->
 <div class="header">
 <a href="index.html">
 <img src="final logo white.svg" alt="JMY Fabrication Logo" class="logo">
@@ -193,7 +176,6 @@ h2 { margin-top:60px; color:#4F6F81; }
 <p>Professional branded apparel programs with managed production and fulfillment.</p>
 </div>
 
-<!-- IMAGE -->
 <div class="hero-image">
 <img src="0f23dcd5-d071-46e4-b901-9ab7d77c8dc1.png"
 alt="Professional business team wearing custom embroidered JMY Fabrication branded apparel">
@@ -205,7 +187,6 @@ REQUEST A STORE
 </a>
 </div>
 
-<!-- CONTENT -->
 <div class="container">
 
 <p>
@@ -234,7 +215,6 @@ Stores can include custom printed and embroidered apparel, hats, hoodies, polos 
 
 </div>
 
-<!-- FAQ -->
 <div class="faq-wrapper">
 <div class="faq-inner">
 
@@ -251,7 +231,6 @@ JMY Fabrication manages production, quality control and fulfillment so your orga
 </div>
 </div>
 
-<!-- REWARDS -->
 <div class="rewards-highlight">
 ASK US ABOUT OUR REWARDS PROGRAM
 <div class="rewards-subtext">
@@ -259,19 +238,9 @@ Earn long-term value through our exclusive rewards program designed to support b
 </div>
 </div>
 
-<!-- FOOTER (MATCHED) -->
-<div class="footer">
-    JMY Fabrication • Based in New York • Serving Clients Nationwide<br><br>
-    Email: <a href="mailto:WeGrowYou@jmyfabrication.com">WeGrowYou@jmyfabrication.com</a><br>
-    Phone: <a href="tel:3157679062">315-767-9062</a><br><br>
-    © 2026 JMY Fabrication
-</div>
+<!-- SHARED FOOTER -->
+<div id="footer-placeholder"></div>
 
-<script>
-function toggleMenu() {
-    document.getElementById("menu").classList.toggle("active");
-}
-</script>
 <script>
 function toggleMenu() {
     document.getElementById("menu").classList.toggle("active");
@@ -288,5 +257,6 @@ function loadHTML(id, file) {
 loadHTML("header-placeholder", "header.html");
 loadHTML("footer-placeholder", "footer.html");
 </script>
+
 </body>
 </html>
