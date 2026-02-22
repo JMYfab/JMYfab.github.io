@@ -21,7 +21,7 @@ body {
     color: #222;
 }
 
-/* NAVBAR */
+/* NAVBAR styles (used by header.html) */
 .navbar {
     background-color: #000;
     padding: 14px 30px;
@@ -38,7 +38,6 @@ body {
     cursor: pointer;
 }
 
-/* WHITE DROPDOWN */
 .dropdown {
     position: absolute;
     right: 0;
@@ -162,27 +161,11 @@ body {
     text-align: center;
 }
 
-.brand-band h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-.brand-band p {
-    max-width: 700px;
-    margin: auto;
-    line-height: 1.6;
-}
-
 /* WHAT'S NEXT */
 .next-section {
     background-color: #CBB894;
     padding: 100px 20px;
     text-align: center;
-}
-
-.next-section h2 {
-    font-size: 32px;
-    margin-bottom: 50px;
 }
 
 .next-buttons a {
@@ -203,7 +186,7 @@ body {
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
-/* FOOTER */
+/* FOOTER styles (used by footer.html) */
 .footer {
     background-color: #1a1a1a;
     color: white;
@@ -217,36 +200,19 @@ body {
     text-decoration: none;
 }
 
-/* MOBILE */
 @media(max-width:768px){
-    .services-container {
-        grid-template-columns: 1fr;
-    }
+    .services-container { grid-template-columns: 1fr; }
 }
 </style>
 </head>
 
 <body>
 
-<div class="navbar">
-    <div class="menu" id="menu">
-        <div class="menu-button" onclick="toggleMenu()">Menu ▾</div>
-        <div class="dropdown">
-            <a href="#">About Us</a>
-            <a href="#">Contact Us</a>
-            <a href="#services">What We Offer</a>
-            <a href="#">Request a Quote</a>
-            <a href="#">Schedule an Appointment</a>
-            <a href="online-stores.html">Need a Store?</a>
-            <a href="#">Browse Promotional Products</a>
-            <a href="#">Browse Our Catalog</a>
-            <a href="#">Browse Apparel</a>
-        </div>
-    </div>
-</div>
+<!-- SHARED HEADER -->
+<div id="header-placeholder"></div>
 
 <section class="hero texture">
-    <img src="final logo white.svg" alt="JMY Fabrication Custom Apparel and Promotional Products Logo" class="logo">
+    <img src="final logo white.svg" alt="JMY Fabrication Logo" class="logo">
     <h1>Full-Service Brand Growth Solutions</h1>
     <p>
         Helping businesses and organizations grow nationwide through modern branding,
@@ -256,7 +222,6 @@ body {
 
 <section id="services" class="services-section">
     <div class="services-container">
-
         <div class="service-card">
             <h3>Marketing & Social Media</h3>
             <p>Strategic campaigns and branding execution that drive measurable growth.</p>
@@ -274,14 +239,13 @@ body {
 
         <div class="service-card">
             <h3>Promotional Products</h3>
-            <p>Branded merchandise and custom promotional items designed to professionally represent your business, event, or organization.</p>
+            <p>Branded merchandise designed to professionally represent your business, event, or organization.</p>
         </div>
 
         <div class="service-card">
             <h3>Online Stores</h3>
             <p>Custom business, event, or team gear storefronts that simplify ordering and scale efficiently.</p>
         </div>
-
     </div>
 
     <div class="rewards-burst">
@@ -299,7 +263,6 @@ body {
 
 <section class="next-section">
     <h2>What's Next</h2>
-
     <div class="next-buttons">
         <a href="#">Request a Quote</a>
         <a href="#">Schedule an Appointment</a>
@@ -310,18 +273,9 @@ body {
     </div>
 </section>
 
-<div class="footer">
-    JMY Fabrication • Based in New York • Serving Clients Nationwide<br><br>
-    Email: <a href="mailto:WeGrowYou@jmyfabrication.com">WeGrowYou@jmyfabrication.com</a><br>
-    Phone: <a href="tel:3157679062">315-767-9062</a><br><br>
-    © 2026 JMY Fabrication
-</div>
+<!-- SHARED FOOTER -->
+<div id="footer-placeholder"></div>
 
-<script>
-function toggleMenu() {
-    document.getElementById("menu").classList.toggle("active");
-}
-</script>
 <script>
 function toggleMenu() {
     document.getElementById("menu").classList.toggle("active");
@@ -338,5 +292,6 @@ function loadHTML(id, file) {
 loadHTML("header-placeholder", "header.html");
 loadHTML("footer-placeholder", "footer.html");
 </script>
+
 </body>
 </html>
