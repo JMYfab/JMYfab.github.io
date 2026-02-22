@@ -13,6 +13,40 @@
 <style>
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+    /* PREMIUM DROPDOWN ANIMATION */
+.dropdown {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.25s ease;
+    pointer-events: none;
+}
+
+.menu.active .dropdown {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* DIVIDER */
+.menu-divider {
+    height: 1px;
+    background: #e5e5e5;
+    margin: 8px 0;
+}
+
+/* PRIMARY CTA */
+.primary-cta {
+    background-color: #4F6F81;
+    color: #ffffff !important;
+    border-radius: 4px;
+    margin: 6px 12px;
+    text-align: center;
+}
+
+.primary-cta:hover {
+    background-color: #3e5968;
+}
 
 body {
     margin: 0;
