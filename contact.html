@@ -14,7 +14,7 @@
 * { box-sizing: border-box; }
 body { margin:0; font-family:'Montserrat', sans-serif; background:#D6C5AA; color:#222; line-height:1.8; }
 
-/* NAVBAR (shared header styles) */
+/* NAVBAR */
 .navbar {
     background-color:#000;
     padding:14px 30px;
@@ -69,29 +69,39 @@ body { margin:0; font-family:'Montserrat', sans-serif; background:#D6C5AA; color
 
 /* CONTENT */
 .container {
-    max-width:900px;
+    max-width:950px;
     margin:100px auto;
     padding:0 20px;
 }
 
+/* BLUE CONTACT BOX */
 .contact-box {
-    background:#CBB894;
-    padding:60px;
+    background:#4F6F81;
+    color:#fff;
+    padding:70px;
     border-radius:6px;
 }
 
 .contact-box h2 {
     margin-top:0;
-    color:#4F6F81;
-}
-
-.contact-details {
-    margin-top:30px;
 }
 
 .contact-details p {
     font-size:18px;
-    margin:10px 0;
+    margin:12px 0;
+}
+
+.contact-details a {
+    color:#D6C5AA;
+    text-decoration:none;
+    font-weight:600;
+}
+
+/* RESPONSE LINE */
+.response-note {
+    margin-top:25px;
+    font-weight:600;
+    color:#D6C5AA;
 }
 
 /* CTA BUTTONS */
@@ -106,14 +116,33 @@ body { margin:0; font-family:'Montserrat', sans-serif; background:#D6C5AA; color
     text-decoration:none;
     font-weight:700;
     border-radius:4px;
-    background:#4F6F81;
-    color:#fff;
+    background:#CBB894;
+    color:#222;
     transition:.3s;
 }
 
 .button-group a:hover {
     transform:translateY(-4px);
     box-shadow:0 12px 25px rgba(0,0,0,.25);
+}
+
+/* FAQ SECTION */
+.faq-section {
+    margin-top:120px;
+}
+
+.faq-section h2 {
+    color:#4F6F81;
+    margin-bottom:40px;
+}
+
+.faq-item {
+    margin-bottom:30px;
+}
+
+.faq-item strong {
+    display:block;
+    margin-bottom:8px;
 }
 
 /* FOOTER */
@@ -131,7 +160,7 @@ body { margin:0; font-family:'Montserrat', sans-serif; background:#D6C5AA; color
 
 /* MOBILE */
 @media(max-width:768px){
-    .contact-box { padding:35px; }
+    .contact-box { padding:40px; }
 }
 </style>
 </head>
@@ -149,8 +178,8 @@ body { margin:0; font-family:'Montserrat', sans-serif; background:#D6C5AA; color
 </section>
 
 <div class="container">
-    <div class="contact-box">
 
+    <div class="contact-box">
         <h2>Contact Information</h2>
 
         <div class="contact-details">
@@ -159,12 +188,41 @@ body { margin:0; font-family:'Montserrat', sans-serif; background:#D6C5AA; color
             <p><strong>Serving:</strong> Businesses & Organizations Nationwide</p>
         </div>
 
+        <div class="response-note">
+            We respond to all inquiries within the next business day.
+        </div>
+
         <div class="button-group">
             <a href="https://form.jotform.com/260214275377053" target="_blank">Request a Quote</a>
             <a href="https://calendly.com/jmyfabrication/1-hour-meeting-on-site" target="_blank">Schedule an Appointment</a>
         </div>
-
     </div>
+
+    <!-- FAQ SECTION -->
+    <div class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <strong>What types of businesses do you work with?</strong>
+            We work with companies, organizations, schools, teams, and event coordinators nationwide.
+        </div>
+
+        <div class="faq-item">
+            <strong>Do you offer nationwide service?</strong>
+            Yes. We support clients across the United States with production and fulfillment solutions.
+        </div>
+
+        <div class="faq-item">
+            <strong>Can I schedule a consultation before requesting a quote?</strong>
+            Absolutely. You can book a meeting directly through our scheduling link to discuss your project.
+        </div>
+
+        <div class="faq-item">
+            <strong>Do you manage ongoing apparel or online store programs?</strong>
+            Yes. We build and manage long-term apparel programs and online storefront solutions for businesses and organizations.
+        </div>
+    </div>
+
 </div>
 
 <div id="footer-placeholder"></div>
