@@ -13,7 +13,15 @@
 <style>
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-    /* PREMIUM DROPDOWN ANIMATION */
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #D6C5AA;
+    color: #222;
+}
+
+/* PREMIUM DROPDOWN ANIMATION */
 .dropdown {
     opacity: 0;
     transform: translateY(-10px);
@@ -28,34 +36,7 @@ html { scroll-behavior: smooth; }
     pointer-events: auto;
 }
 
-/* DIVIDER */
-.menu-divider {
-    height: 1px;
-    background: #e5e5e5;
-    margin: 8px 0;
-}
-
-/* PRIMARY CTA */
-.primary-cta {
-    background-color: #4F6F81;
-    color: #ffffff !important;
-    border-radius: 4px;
-    margin: 6px 12px;
-    text-align: center;
-}
-
-.primary-cta:hover {
-    background-color: #3e5968;
-}
-
-body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #D6C5AA;
-    color: #222;
-}
-
-/* NAVBAR styles (used by header.html) */
+/* NAVBAR */
 .navbar {
     background-color: #000;
     padding: 14px 30px;
@@ -100,7 +81,7 @@ body {
 
 .menu.active .dropdown { display: flex; }
 
-/* TEXTURE */
+/* HERO */
 .texture {
     background-color: #4F6F81;
     background-image:
@@ -108,7 +89,6 @@ body {
         url("https://www.transparenttextures.com/patterns/old-paper.png");
 }
 
-/* HERO */
 .hero {
     text-align: center;
     padding: 80px 20px 130px 20px;
@@ -202,6 +182,11 @@ body {
     text-align: center;
 }
 
+.next-section h2 {
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
 .next-buttons a {
     display: block;
     margin: 18px auto;
@@ -220,7 +205,7 @@ body {
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
-/* FOOTER styles (used by footer.html) */
+/* FOOTER */
 .footer {
     background-color: #1a1a1a;
     color: white;
@@ -242,7 +227,6 @@ body {
 
 <body>
 
-<!-- SHARED HEADER -->
 <div id="header-placeholder"></div>
 
 <section class="hero texture">
@@ -298,16 +282,15 @@ body {
 <section class="next-section">
     <h2>What's Next</h2>
     <div class="next-buttons">
-        <a href="#">Request a Quote</a>
-        <a href="#">Schedule an Appointment</a>
+        <a href="https://form.jotform.com/260214275377053" target="_blank">Request a Quote</a>
+        <a href="https://calendly.com/jmyfabrication/1-hour-meeting-on-site" target="_blank">Schedule an Appointment</a>
         <a href="online-stores.html">Need a Store?</a>
-        <a href="#">Browse Promotional Products</a>
+        <a href="https://premierpersonalizedgifts.com/index.php?prices=NO&cust=332314" target="_blank">Browse Promotional Products</a>
         <a href="#">Browse Our Catalog</a>
-        <a href="#">Browse Apparel</a>
+        <a href="https://www.companycasuals.com/JMYfabrication" target="_blank">Browse Apparel</a>
     </div>
 </section>
 
-<!-- SHARED FOOTER -->
 <div id="footer-placeholder"></div>
 
 <script>
