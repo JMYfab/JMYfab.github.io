@@ -12,9 +12,9 @@
 
 <style>
 * { box-sizing: border-box; }
-body { margin:0; font-family:'Montserrat', sans-serif; background:#D6C5AA; color:#222; line-height:1.6; }
+body { margin:0; font-family:'Montserrat', sans-serif; background:#D6C5AA; color:#222; line-height:1.7; }
 
-/* NAVBAR styles (used by header.html) */
+/* NAVBAR */
 .navbar {
     background-color:#000;
     padding:14px 30px;
@@ -22,26 +22,32 @@ body { margin:0; font-family:'Montserrat', sans-serif; background:#D6C5AA; color
     justify-content:flex-end;
     position:relative;
 }
-
 .menu { position:relative; }
+.menu-button { color:#fff; font-weight:600; cursor:pointer; }
 
-.menu-button {
-    color:#fff;
-    font-weight:600;
-    cursor:pointer;
-}
-
+/* UPDATED DROPDOWN */
 .dropdown {
     position:absolute;
     right:0;
     top:40px;
     background:#ffffff;
     min-width:260px;
-    display:none;
+    display:flex;
     flex-direction:column;
     border-radius:6px;
     box-shadow:0 15px 35px rgba(0,0,0,0.2);
     overflow:hidden;
+
+    opacity:0;
+    transform:translateY(-10px);
+    transition:all 0.25s ease;
+    pointer-events:none;
+}
+
+.menu.active .dropdown {
+    opacity:1;
+    transform:translateY(0);
+    pointer-events:auto;
 }
 
 .dropdown a {
@@ -55,27 +61,41 @@ body { margin:0; font-family:'Montserrat', sans-serif; background:#D6C5AA; color
 
 .dropdown a:hover { background:#f5f5f5; }
 
-.menu.active .dropdown { display:flex; }
+.menu-divider {
+    height:1px;
+    background:#e5e5e5;
+    margin:8px 0;
+}
 
 /* HEADER */
 .header {
     background-color:#4F6F81;
     color:#fff;
     text-align:center;
-    padding:70px 20px 90px 20px;
+    padding:100px 20px 120px;
 }
 
 .logo {
-    max-width:180px;
-    margin-bottom:25px;
+    max-width:200px;
+    margin-bottom:30px;
 }
 
-.header h1 { margin-bottom:15px; }
+.header h1 {
+    font-size:36px;
+    margin-bottom:20px;
+}
+
+.header p {
+    font-weight:600;
+    font-size:18px;
+    max-width:750px;
+    margin:auto;
+}
 
 /* HERO IMAGE */
 .hero-image {
     max-width:1100px;
-    margin:-60px auto 40px auto;
+    margin:-80px auto 60px;
     padding:0 20px;
 }
 
@@ -86,12 +106,15 @@ body { margin:0; font-family:'Montserrat', sans-serif; background:#D6C5AA; color
 }
 
 /* CTA */
-.cta-store { text-align:center; margin:40px 0; }
+.cta-store {
+    text-align:center;
+    margin:60px 0;
+}
 
 .cta-store a {
     background:#4F6F81;
     color:#fff;
-    padding:18px 40px;
+    padding:18px 48px;
     text-decoration:none;
     font-weight:800;
     border-radius:4px;
@@ -106,48 +129,65 @@ body { margin:0; font-family:'Montserrat', sans-serif; background:#D6C5AA; color
 }
 
 /* CONTENT */
-.container { max-width:900px; margin:0 auto; padding:0 20px; }
-h2 { margin-top:60px; color:#4F6F81; }
+.container {
+    max-width:950px;
+    margin:80px auto;
+    padding:0 20px;
+}
+
+.container h2 {
+    margin-top:70px;
+    margin-bottom:15px;
+    color:#4F6F81;
+    font-size:26px;
+}
 
 /* FAQ */
 .faq-wrapper {
     background:#4F6F81;
     color:#fff;
-    padding:80px 20px;
-    margin-top:80px;
+    padding:100px 20px;
+    margin-top:100px;
 }
 
-.faq-inner { max-width:900px; margin:0 auto; }
+.faq-inner {
+    max-width:900px;
+    margin:0 auto;
+}
 
 .faq-title {
     text-align:center;
-    font-size:30px;
+    font-size:32px;
     font-weight:800;
-    margin-bottom:50px;
+    margin-bottom:60px;
+}
+
+.faq-inner p {
+    margin-bottom:30px;
 }
 
 /* REWARDS */
 .rewards-highlight {
-    margin:100px auto;
-    padding:60px 30px;
+    margin:120px auto;
+    padding:70px 40px;
     background:#4F6F81;
     color:#fff;
     text-align:center;
     font-weight:800;
-    font-size:26px;
+    font-size:28px;
     border-radius:8px;
     max-width:900px;
     box-shadow:0 20px 45px rgba(0,0,0,.25);
 }
 
 .rewards-subtext {
-    max-width:700px;
+    max-width:750px;
     margin:25px auto 0;
     font-weight:600;
-    font-size:16px;
+    font-size:17px;
 }
 
-/* FOOTER styles (used by footer.html) */
+/* FOOTER */
 .footer {
     background-color:#1a1a1a;
     color:white;
@@ -155,7 +195,6 @@ h2 { margin-top:60px; color:#4F6F81; }
     padding:50px 20px;
     font-size:14px;
 }
-
 .footer a {
     color:#D6C5AA;
     text-decoration:none;
@@ -165,7 +204,6 @@ h2 { margin-top:60px; color:#4F6F81; }
 
 <body>
 
-<!-- SHARED HEADER -->
 <div id="header-placeholder"></div>
 
 <div class="header">
@@ -173,7 +211,9 @@ h2 { margin-top:60px; color:#4F6F81; }
 <img src="final logo white.svg" alt="JMY Fabrication Logo" class="logo">
 </a>
 <h1>Custom Online Stores for Businesses, Organizations & Teams</h1>
-<p>Professional branded apparel programs with managed production and fulfillment.</p>
+<p>
+Professional branded apparel programs with managed production and fulfillment designed to scale.
+</p>
 </div>
 
 <div class="hero-image">
@@ -182,7 +222,7 @@ alt="Professional business team wearing custom embroidered JMY Fabrication brand
 </div>
 
 <div class="cta-store">
-<a href="https://form.jotform.com/260514722237149" target="_blank">
+<a href="https://form.jotform.com/260514722237149" target="_blank" rel="noopener noreferrer">
 REQUEST A STORE
 </a>
 </div>
@@ -190,27 +230,27 @@ REQUEST A STORE
 <div class="container">
 
 <p>
-JMY Fabrication builds fully customized online stores for businesses, organizations and teams across the United States. Based in New York and serving clients nationwide, we create streamlined storefront programs that eliminate the complexity of ordering branded apparel and promotional merchandise.
+JMY Fabrication builds fully customized online stores for businesses, organizations and teams nationwide. We create streamlined storefront programs that eliminate the complexity of ordering branded apparel and promotional merchandise while maintaining brand consistency.
 </p>
 
 <h2>Corporate & Business Apparel Programs</h2>
 <p>
-Our online storefront programs centralize employee apparel ordering, maintain brand standards and simplify internal processes.
+Centralize employee apparel ordering, maintain brand standards and simplify internal processes through structured storefront systems.
 </p>
 
 <h2>Team & Organization Stores</h2>
 <p>
-We design clean, professional storefronts for sports teams, schools and community organizations.
+Clean, professional storefronts for teams, schools, and organizations with simplified ordering and managed fulfillment.
 </p>
 
 <h2>Year-Round Store Options</h2>
 <p>
-We offer both limited-time store windows and year-round storefront programs for long-term consistency.
+Choose limited-time store windows or year-round storefront programs designed for long-term consistency and brand control.
 </p>
 
 <h2>Production & Fulfillment</h2>
 <p>
-Stores can include custom printed and embroidered apparel, hats, hoodies, polos and promotional merchandise including water bottles, key chains and other engraved items.
+Custom printed and embroidered apparel, hats, polos, hoodies and promotional merchandise including water bottles, key chains and engraved items — all professionally produced and fulfilled.
 </p>
 
 </div>
@@ -221,12 +261,10 @@ Stores can include custom printed and embroidered apparel, hats, hoodies, polos 
 <div class="faq-title">Frequently Asked Questions</div>
 
 <p><strong>Can our store stay open year-round?</strong><br>
-Yes. We offer both limited-time store windows and year-round storefront options.
-</p>
+Yes. We offer both limited-time store windows and year-round storefront options.</p>
 
 <p><strong>Who handles production and fulfillment?</strong><br>
-JMY Fabrication manages production, quality control and fulfillment so your organization does not need to manage inventory.
-</p>
+JMY Fabrication manages production, quality control and fulfillment so your organization does not need to manage inventory.</p>
 
 </div>
 </div>
@@ -238,14 +276,12 @@ Earn long-term value through our exclusive rewards program designed to support b
 </div>
 </div>
 
-<!-- SHARED FOOTER -->
 <div id="footer-placeholder"></div>
 
 <script>
 function toggleMenu() {
     document.getElementById("menu").classList.toggle("active");
 }
-
 function loadHTML(id, file) {
     fetch(file)
         .then(response => response.text())
@@ -253,7 +289,6 @@ function loadHTML(id, file) {
             document.getElementById(id).innerHTML = data;
         });
 }
-
 loadHTML("header-placeholder", "header.html");
 loadHTML("footer-placeholder", "footer.html");
 </script>
