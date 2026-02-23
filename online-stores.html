@@ -14,15 +14,30 @@
 * { box-sizing: border-box; }
 body { margin:0; font-family:'Montserrat', sans-serif; background:#D6C5AA; color:#222; line-height:1.7; }
 
-.header {
+/* HEADER */
+.page-header {
     background-color:#4F6F81;
     color:#fff;
     text-align:center;
-    padding:80px 20px;
+    padding:80px 20px 100px 20px;
 }
 
 .logo { max-width:180px; margin-bottom:25px; }
 
+/* HERO IMAGE */
+.hero-image {
+    max-width:1100px;
+    margin:-60px auto 40px auto;
+    padding:0 20px;
+}
+
+.hero-image img {
+    width:100%;
+    border-radius:10px;
+    box-shadow:0 25px 50px rgba(0,0,0,0.25);
+}
+
+/* CONTENT */
 .container { max-width:1000px; margin:0 auto; padding:60px 20px; }
 
 h2 { color:#4F6F81; margin-top:60px; }
@@ -44,6 +59,7 @@ h2 { color:#4F6F81; margin-top:60px; }
     box-shadow:0 12px 25px rgba(0,0,0,.25);
 }
 
+/* FAQ */
 .faq-section {
     background:#4F6F81;
     color:#fff;
@@ -54,23 +70,16 @@ h2 { color:#4F6F81; margin-top:60px; }
 
 .faq-inner h2 { color:#fff; text-align:center; }
 
-.footer {
-    background-color:#1a1a1a;
-    color:white;
-    text-align:center;
-    padding:50px 20px;
-    font-size:14px;
-}
-
-.footer a { color:#D6C5AA; text-decoration:none; }
 </style>
 </head>
 
 <body>
 
+<!-- SHARED HEADER -->
 <div id="header-placeholder"></div>
 
-<div class="header">
+<!-- PAGE HEADER -->
+<div class="page-header">
 <a href="index.html">
 <img src="final logo white.svg" alt="JMY Fabrication Logo" class="logo">
 </a>
@@ -79,6 +88,12 @@ h2 { color:#4F6F81; margin-top:60px; }
 <a href="https://form.jotform.com/260514722237149" target="_blank" class="cta-primary">
 Request Your Store Setup
 </a>
+</div>
+
+<!-- HERO IMAGE RESTORED -->
+<div class="hero-image">
+<img src="0f23dcd5-d071-46e4-b901-9ab7d77c8dc1.png"
+alt="Professional business team wearing custom embroidered JMY Fabrication branded apparel">
 </div>
 
 <div class="container">
@@ -129,6 +144,7 @@ Start Your Online Store Today
 
 </div>
 
+<!-- FAQ -->
 <div class="faq-section">
 <div class="faq-inner">
 
@@ -149,14 +165,14 @@ Stores can include custom embroidered apparel, printed garments, promotional mer
 </div>
 </div>
 
-<div class="footer">
-JMY Fabrication • Based in New York • Serving Clients Nationwide<br><br>
-Email: <a href="mailto:WeGrowYou@jmyfabrication.com">WeGrowYou@jmyfabrication.com</a><br>
-Phone: <a href="tel:3157679062">315-767-9062</a><br><br>
-© 2026 JMY Fabrication
-</div>
+<!-- SHARED FOOTER -->
+<div id="footer-placeholder"></div>
 
 <script>
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+}
+
 function loadHTML(id, file) {
     fetch(file)
         .then(response => response.text())
@@ -166,6 +182,7 @@ function loadHTML(id, file) {
 }
 
 loadHTML("header-placeholder", "header.html");
+loadHTML("footer-placeholder", "footer.html");
 </script>
 
 </body>
