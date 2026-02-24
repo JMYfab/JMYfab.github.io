@@ -13,8 +13,61 @@
 <style>
 * { box-sizing: border-box; }
 body { margin:0; font-family:'Montserrat', sans-serif; background:#D6C5AA; color:#222; line-height:1.7; }
+    /* NAVBAR */
+.navbar {
+    background-color:#000;
+    padding:14px 30px;
+    display:flex;
+    justify-content:flex-end;
+    position:relative;
+}
 
-/* PAGE HEADER */
+.menu { position:relative; }
+
+.menu-button {
+    color:#fff;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.dropdown {
+    position:absolute;
+    right:0;
+    top:40px;
+    background:#ffffff;
+    min-width:260px;
+    display:none;
+    flex-direction:column;
+    border-radius:6px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.2);
+    overflow:hidden;
+    opacity:0;
+    transform:translateY(-10px);
+    transition:all .25s ease;
+    pointer-events:none;
+}
+
+.menu.active .dropdown {
+    display:flex;
+    opacity:1;
+    transform:translateY(0);
+    pointer-events:auto;
+}
+
+.dropdown a {
+    padding:14px 18px;
+    color:#4F6F81;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+    border-bottom:1px solid #eee;
+}
+
+.dropdown a:hover {
+    background:#f5f5f5;
+}
+
+/* HEADER */
 .page-header {
     background-color:#4F6F81;
     color:#fff;
@@ -63,42 +116,18 @@ h2 { color:#4F6F81; margin-top:60px; }
 .faq-section {
     background:#4F6F81;
     color:#fff;
-    padding:80px 20px 140px 20px;
-    position:relative;
+    padding:80px 20px;
 }
 
 .faq-inner { max-width:1000px; margin:0 auto; }
 
 .faq-inner h2 { color:#fff; text-align:center; }
-
-/* REWARDS CIRCLE AT BOTTOM */
-.rewards-burst {
-    position:absolute;
-    bottom:-90px;
-    left:50%;
-    transform:translateX(-50%);
-    width:260px;
-    height:260px;
-    background:#4F6F81;
-    color:#fff;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:30px;
-    font-weight:800;
-    font-size:20px;
-    line-height:1.2;
-    box-shadow:0 18px 40px rgba(0,0,0,0.25);
-}
-
-/* FOOTER */
+    /* FOOTER */
 .footer {
     background-color:#1a1a1a;
     color:white;
     text-align:center;
-    padding:120px 20px 50px 20px;
+    padding:50px 20px;
     font-size:14px;
 }
 
@@ -106,107 +135,6 @@ h2 { color:#4F6F81; margin-top:60px; }
     color:#D6C5AA;
     text-decoration:none;
 }
+
 </style>
 </head>
-
-<body>
-
-<div id="header-placeholder"></div>
-
-<div class="page-header">
-<a href="index.html">
-<img src="final logo white.svg" alt="JMY Fabrication Logo" class="logo">
-</a>
-<h1>Custom Online Stores Built for Growth</h1>
-<p>Professional apparel and merchandise storefront programs for businesses, organizations and teams nationwide.</p>
-<a href="https://form.jotform.com/260514722237149" target="_blank" class="cta-primary">
-Request Your Store Setup
-</a>
-</div>
-
-<div class="hero-image">
-<img src="0f23dcd5-d071-46e4-b901-9ab7d77c8dc1.png"
-alt="Professional business team wearing custom embroidered JMY Fabrication branded apparel">
-</div>
-
-<div class="container">
-
-<p>
-JMY Fabrication designs and manages fully customized online stores for businesses, organizations and teams across the United States. Our streamlined storefront programs eliminate the hassle of inventory management, payment processing and fulfillment while maintaining complete brand control.
-</p>
-
-<h2>Custom Online Stores for Businesses</h2>
-<p>
-We build professional company apparel stores that allow employees to order branded merchandise on demand while protecting brand consistency.
-</p>
-
-<h2>Employee Apparel & Corporate Merchandise Programs</h2>
-<p>
-Businesses can operate year-round employee stores or limited-time ordering windows depending on operational needs. We handle production, embroidery, printing and direct fulfillment.
-</p>
-
-<h2>Team & Organization Storefronts</h2>
-<p>
-We create clean, easy-to-use online stores for sports teams, community organizations and corporate teams.
-</p>
-
-<h2>Year-Round & Ongoing Store Options</h2>
-<p>
-Our online store programs can remain open year-round, allowing organizations to offer ongoing apparel access without managing inventory or storage.
-</p>
-
-<h2>Production, Embroidery & Fulfillment</h2>
-<p>
-All products are professionally printed or embroidered in-house including promotional merchandise, engraved items, water bottles, key chains and branded accessories.
-</p>
-
-<div style="text-align:center;">
-<a href="https://form.jotform.com/260514722237149" target="_blank" class="cta-primary">
-Start Your Online Store Today
-</a>
-</div>
-
-</div>
-
-<div class="faq-section">
-<div class="faq-inner">
-
-<h2>Frequently Asked Questions</h2>
-
-<p><strong>Can our store stay open year-round?</strong><br>
-Yes. We offer both limited-time ordering windows and year-round online store programs.
-</p>
-
-<p><strong>Who manages production and fulfillment?</strong><br>
-JMY Fabrication handles production, embroidery, printing and direct fulfillment so you do not manage inventory.
-</p>
-
-</div>
-
-<div class="rewards-burst">
-ASK US<br>ABOUT OUR<br>REWARDS<br>PROGRAM
-</div>
-
-</div>
-
-<div id="footer-placeholder"></div>
-
-<script>
-function toggleMenu() {
-    document.getElementById("menu").classList.toggle("active");
-}
-
-function loadHTML(id, file) {
-    fetch(file)
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById(id).innerHTML = data;
-        });
-}
-
-loadHTML("header-placeholder", "header.html");
-loadHTML("footer-placeholder", "footer.html");
-</script>
-
-</body>
-</html>
